@@ -1,65 +1,74 @@
-"""한국어 구조화 요약 생성 — 관련도 임계값 통과 논문 대상.
+"""요약 생성 (LLM 미사용) — abstract/TLDR + 키워드 기반 DV/IV/방법 태깅.
 
-내용은 가공하지 않고 abstract에 근거해 요약한다(없는 내용 추론 금지).
-필드: summary(요약), dependent_var, independent_var, method, korea_implication.
+LLM 없이 동작하도록 원문 abstract와 Semantic Scholar TLDR를 그대로 쓰고,
+연구자 도메인에 맞춘 용어 사전으로 종속/독립변수·방법을 휴리스틱 추출한다.
+요약 본문은 영어(원문 기반), 라벨은 한국어.
 """
 from __future__ import annotations
 
-import json
-import logging
 from dataclasses import dataclass
 
-from .llm import complete_json
 from .rank import ScoredPaper
 
-log = logging.getLogger(__name__)
+# 도메인 용어 사전 — 매칭되면 해당 변수/방법으로 표기 (소문자 부분일치)
+_DV_TERMS = {
+    "follow-on": "후속투자", "follow on": "후속투자", "followon": "후속투자",
+    "staged financing": "단계적 투자", "staging": "단계적 투자",
+    "valuation": "기업가치", "investment amount": "투자규모",
+    "survival": "생존", "exit": "exit", "ipo": "IPO",
+    "acquisition": "M&A", "merger": "M&A", "fundraising": "펀드레이징",
+}
+_IV_TERMS = {
+    "traction": "market traction", "user growth": "사용자 성장",
+    "startup growth": "스타트업 성장", "growth": "성장",
+    "governance": "기업지배구조", "board": "이사회",
+    "machine learning": "머신러닝", "deep learning": "딥러닝",
+    " ml ": "머신러닝", "signal": "신호",
+}
+_METHOD_TERMS = {
+    "difference-in-differences": "이중차분(DiD)", "diff-in-diff": "이중차분(DiD)",
+    "regression discontinuity": "회귀불연속(RDD)",
+    "instrumental variable": "도구변수(IV)",
+    "machine learning": "머신러닝", "random forest": "머신러닝",
+    "panel": "패널분석", "survival analysis": "생존분석",
+    "matching": "매칭", "natural experiment": "자연실험",
+    "regression": "회귀분석",
+}
 
 
 @dataclass
 class KoreanSummary:
-    summary: str = ""             # 3~4문장 한국어 요약
-    dependent_var: str = ""       # 식별된 종속변수
-    independent_var: str = ""     # 식별된 독립변수
-    method: str = ""              # 데이터·방법론
-    korea_implication: str = ""   # 한국 시장 적용 함의
+    summary: str = ""             # 원문 기반 요약(TLDR 우선, 없으면 abstract)
+    dependent_var: str = ""       # 키워드로 탐지된 종속변수 후보
+    independent_var: str = ""     # 키워드로 탐지된 독립변수 후보(traction 강조)
+    method: str = ""              # 탐지된 방법론
+    korea_implication: str = ""   # LLM 미사용 시 비움
 
 
-_SYSTEM = (
-    "당신은 창업금융 연구 논문을 한국어로 정확히 요약하는 연구 조교입니다. "
-    "초록에 명시된 내용만 사용하고, 없는 결과를 지어내지 마세요."
-)
+def _detect(text: str, terms: dict[str, str]) -> str:
+    found: list[str] = []
+    for needle, label in terms.items():
+        if needle in text and label not in found:
+            found.append(label)
+    return ", ".join(found)
 
 
-def _prompt(profile: dict, s: ScoredPaper) -> str:
+def summarize(s: ScoredPaper, profile: dict | None = None) -> KoreanSummary:
     p = s.paper
-    return "\n".join([
-        "다음 논문을 한국 기반 창업금융 연구자 관점에서 요약하세요.",
-        f"제목: {p.title}",
-        f"저널: {p.venue or 'NA'} ({p.year or 'NA'})",
-        f"초록: {(p.abstract or '(초록 없음)')[:2500]}",
-        "",
-        "JSON 객체로만 답하세요:",
-        json.dumps({
-            "summary": "3~4문장 한국어 요약(연구질문·핵심결과 중심)",
-            "dependent_var": "이 논문의 종속변수(없으면 빈 문자열)",
-            "independent_var": "핵심 독립변수(market traction 관련 있으면 명시)",
-            "method": "데이터·표본·분석방법 한 줄",
-            "korea_implication": "한국 시장 적용/확장 시 시사점 한두 문장",
-        }, ensure_ascii=False),
-    ])
+    tldr = p.extra.get("tldr")
+    abstract = p.abstract or ""
+    if tldr:
+        body = tldr
+    elif abstract:
+        body = abstract[:600] + ("…" if len(abstract) > 600 else "")
+    else:
+        body = "(초록 없음 — DOI 링크에서 확인)"
 
-
-def summarize(s: ScoredPaper, profile: dict) -> KoreanSummary:
-    model = profile.get("model", "claude-sonnet-4-6")
-    try:
-        data = complete_json(_prompt(profile, s), model=model, max_tokens=1200, system=_SYSTEM)
-    except Exception as e:  # noqa: BLE001
-        log.warning("요약 실패 (%s): %s", s.paper.title[:40], e)
-        return KoreanSummary(summary="(요약 생성 실패)")
+    text = f" {(p.title or '').lower()} {abstract.lower()} {(tldr or '').lower()} "
     return KoreanSummary(
-        summary=data.get("summary", ""),
-        dependent_var=data.get("dependent_var", ""),
-        independent_var=data.get("independent_var", ""),
-        method=data.get("method", ""),
-        korea_implication=data.get("korea_implication", ""),
+        summary=body,
+        dependent_var=_detect(text, _DV_TERMS),
+        independent_var=_detect(text, _IV_TERMS),
+        method=_detect(text, _METHOD_TERMS),
+        korea_implication="",
     )

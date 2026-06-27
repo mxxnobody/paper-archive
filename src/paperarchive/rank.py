@@ -1,111 +1,113 @@
-"""관련도 랭킹 — 1차 키워드 스코어로 후보 축소, 2차 Claude 의미 랭킹.
+"""관련도 랭킹 (LLM 미사용) — 가중 키워드·저널·인용·최신성 휴리스틱.
 
-- keyword_score / prefilter: 외부 의존 없는 순수 함수(테스트 가능).
-- claude_rank: 후보를 배치로 묶어 Claude가 0~100 관련도 + 근거 산출.
+핵심 키워드(core)는 가중치를 높여 연구 정체성에 직결된 논문을 끌어올린다.
+모든 함수가 외부 의존 없는 순수 함수라 테스트 가능하다.
 """
 from __future__ import annotations
 
-import json
-import logging
-from dataclasses import dataclass, field
+import math
+from dataclasses import dataclass
+from datetime import datetime, timezone
 
-from .llm import complete_json
 from .sources.base import Paper
-
-log = logging.getLogger(__name__)
 
 
 @dataclass
 class ScoredPaper:
     paper: Paper
-    keyword_score: float = 0.0
-    relevance: int = 0          # Claude 0~100
+    weighted: float = 0.0       # 가중 키워드 점수 (prefilter 정렬용)
+    keyword_hits: int = 0
+    relevance: int = 0          # 0~100 휴리스틱
     reason: str = ""            # 한국어 관련도 근거
     is_canon: bool = False
 
 
-def keyword_score(paper: Paper, keywords: list[str], allowlist: list[str]) -> float:
-    """제목·abstract·concept의 키워드 매칭 + 저널 allowlist 가산점."""
-    haystack = " ".join([
+def _haystack(paper: Paper) -> str:
+    return " ".join([
         paper.title or "",
         paper.abstract or "",
+        paper.extra.get("tldr", ""),
         " ".join(paper.concepts),
     ]).lower()
-    score = sum(1.0 for kw in keywords if kw.lower() in haystack)
+
+
+def matched_keywords(paper: Paper, keywords: list[str]) -> list[str]:
+    h = _haystack(paper)
+    return [kw for kw in keywords if kw.lower() in h]
+
+
+def in_allowlist(paper: Paper, allowlist: list[str]) -> bool:
     venue = (paper.venue or "").lower()
-    if allowlist and any(j.lower() in venue for j in allowlist):
-        score += 2.0
-    return score
+    return bool(allowlist) and any(j.lower() in venue for j in allowlist)
+
+
+def weighted_score(
+    paper: Paper, keywords: list[str], core: list[str], core_weight: float
+) -> tuple[float, int]:
+    """(가중합, 일치 키워드 수). 핵심 키워드는 core_weight, 일반은 1."""
+    hits = matched_keywords(paper, keywords)
+    core_lower = {c.lower() for c in core}
+    total = sum(core_weight if kw.lower() in core_lower else 1.0 for kw in hits)
+    return total, len(hits)
 
 
 def prefilter(
-    papers: list[Paper], keywords: list[str], allowlist: list[str], top_n: int
+    papers: list[Paper], profile: dict, top_n: int
 ) -> list[ScoredPaper]:
-    """키워드 스코어 > 0인 논문을 점수순으로 정렬해 상위 top_n 반환."""
-    scored = [
-        ScoredPaper(paper=p, keyword_score=keyword_score(p, keywords, allowlist))
-        for p in papers
-    ]
-    scored = [s for s in scored if s.keyword_score > 0]
-    scored.sort(key=lambda s: (s.keyword_score, s.paper.cited_by), reverse=True)
+    """가중합 >= min_weight 논문을 점수순 정렬해 상위 top_n 반환."""
+    keywords = profile.get("keywords", [])
+    core = profile.get("core_keywords", [])
+    cfg = profile.get("ranking", {})
+    core_weight = cfg.get("core_weight", 2)
+    min_weight = cfg.get("min_weight", 2)
+    allowlist = profile.get("journal_allowlist", [])
+
+    scored = []
+    for p in papers:
+        w, hits = weighted_score(p, keywords, core, core_weight)
+        if w < min_weight:
+            continue
+        s = ScoredPaper(paper=p, weighted=w + (1.0 if in_allowlist(p, allowlist) else 0.0),
+                        keyword_hits=hits)
+        scored.append(s)
+    scored.sort(key=lambda s: (s.weighted, s.paper.cited_by), reverse=True)
     return scored[:top_n]
 
 
-_RANK_SYSTEM = (
-    "당신은 스타트업 모험자본·창업금융 분야의 연구 조교입니다. "
-    "연구자의 프로필에 비추어 각 논문의 관련도를 0~100으로 냉정하게 평가합니다."
-)
+def assign_relevance(candidates: list[ScoredPaper], profile: dict) -> list[ScoredPaper]:
+    """휴리스틱 관련도(0~100)와 한국어 근거를 채운다."""
+    keywords = profile.get("keywords", [])
+    core = profile.get("core_keywords", [])
+    allowlist = profile.get("journal_allowlist", [])
+    cfg = profile.get("ranking", {})
+    core_weight = cfg.get("core_weight", 2)
+    saturate = max(1.0, cfg.get("saturate_weight", 5))
+    cur_year = datetime.now(timezone.utc).year
 
+    for s in candidates:
+        p = s.paper
+        hits = matched_keywords(p, keywords)
+        w, _ = weighted_score(p, keywords, core, core_weight)
+        s.keyword_hits = len(hits)
+        base = min(100.0, 100.0 * w / saturate)
+        allow = in_allowlist(p, allowlist)
+        bonus_allow = 15.0 if allow else 0.0
+        bonus_cite = min(10.0, math.log10(p.cited_by + 1) * 4.0)
+        recency = 0.0
+        if p.year and p.year >= cur_year - 3:
+            recency = 8.0
+        elif p.year and p.year >= cur_year - 6:
+            recency = 4.0
+        s.relevance = int(min(100.0, base + bonus_allow + bonus_cite + recency))
 
-def _build_rank_prompt(profile: dict, batch: list[ScoredPaper]) -> str:
-    lines = [
-        "## 연구자 프로필",
-        profile.get("researcher", ""),
-        f"종속변수: {', '.join(profile.get('dependent_variables', []))}",
-        f"독립변수: {', '.join(profile.get('independent_variables', []))}",
-        "",
-        "## 평가 기준",
-        "- 종속변수(후속투자·단계적투자·투자규모·생존/exit)와의 관련성",
-        "- 독립변수(특히 market traction)와의 관련성",
-        "- 한국 시장 적용·확장 가능성",
-        "- 방법론적 참고가치(ML 등)",
-        "",
-        "## 논문 목록",
-    ]
-    for i, s in enumerate(batch):
-        abs = (s.paper.abstract or "")[:1200]
-        lines.append(
-            f"[{i}] 제목: {s.paper.title}\n"
-            f"    저널: {s.paper.venue or 'NA'} ({s.paper.year or 'NA'})\n"
-            f"    초록: {abs or '(없음)'}"
-        )
-    lines += [
-        "",
-        "각 논문에 대해 JSON 배열로만 답하세요. 형식:",
-        '[{"index": 0, "relevance": 0-100, "reason": "한국어 한 문장 근거"}, ...]',
-        "relevance는 위 기준에 부합할수록 높게. 무관하면 낮게.",
-    ]
-    return "\n".join(lines)
+        bits = [f"키워드 {len(hits)}개 일치"]
+        if hits:
+            bits[0] += f" ({', '.join(hits[:4])})"
+        if allow:
+            bits.append("핵심 저널")
+        if p.cited_by:
+            bits.append(f"인용 {p.cited_by}")
+        s.reason = " · ".join(bits)
 
-
-def claude_rank(
-    candidates: list[ScoredPaper], profile: dict, batch_size: int = 12
-) -> list[ScoredPaper]:
-    """후보를 배치로 Claude에 보내 relevance/reason을 채워 반환(in-place 갱신)."""
-    model = profile.get("model", "claude-sonnet-4-6")
-    for start in range(0, len(candidates), batch_size):
-        batch = candidates[start:start + batch_size]
-        prompt = _build_rank_prompt(profile, batch)
-        try:
-            result = complete_json(prompt, model=model, max_tokens=2048, system=_RANK_SYSTEM)
-        except (json.JSONDecodeError, Exception) as e:  # noqa: BLE001
-            log.warning("랭킹 배치 실패(%d~): %s", start, e)
-            continue
-        for item in result:
-            idx = item.get("index")
-            if idx is None or idx >= len(batch):
-                continue
-            batch[idx].relevance = int(item.get("relevance", 0))
-            batch[idx].reason = item.get("reason", "")
     candidates.sort(key=lambda s: s.relevance, reverse=True)
     return candidates

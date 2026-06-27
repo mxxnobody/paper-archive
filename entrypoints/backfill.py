@@ -3,7 +3,6 @@
 사용:
   python entrypoints/backfill.py                 # 전체
   python entrypoints/backfill.py --limit 20      # 축소 dry-run(랭킹 후보 20편)
-  python entrypoints/backfill.py --limit 20 --skip-llm   # Claude 미사용(무료 검증)
 """
 from __future__ import annotations
 
@@ -18,7 +17,6 @@ from paperarchive.state import load_seen, save_seen
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=None)
-    ap.add_argument("--skip-llm", action="store_true")
     args = ap.parse_args()
 
     profile = config.load_profile()
@@ -31,7 +29,6 @@ def main():
         year_from=profile.get("year_from", 2013),
         seen=seen,
         limit=args.limit,
-        skip_llm=args.skip_llm,
     )
     print(f"\n=== 백필: {len(entries)}편 선정 ===")
 
