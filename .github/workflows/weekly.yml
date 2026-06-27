@@ -1,0 +1,48 @@
+name: Weekly digest
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"   # 매주 월요일 09:00 KST (00:00 UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: paper-archive-run
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run weekly pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+          ZOTERO_USER_ID: ${{ secrets.ZOTERO_USER_ID }}
+          ZOTERO_COLLECTION_KEY: ${{ secrets.ZOTERO_COLLECTION_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: python entrypoints/weekly.py
+      - name: Commit archive state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state site exports
+          git diff --staged --quiet || git commit -m "weekly: update archive [skip ci]"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4

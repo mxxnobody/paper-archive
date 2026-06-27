@@ -1,0 +1,61 @@
+# 연구 프로필 — Claude 관련도 랭킹·요약·검색 쿼리의 단일 진실 원천(SSOT).
+# 자유롭게 수정하세요. 키워드/저널을 바꾸면 다음 실행부터 반영됩니다.
+
+researcher: |
+  한국 기반의 스타트업 모험자본(venture capital)·투자 시장 연구자.
+  종속변수(DV)는 주로 후속투자(follow-on investment)·단계적 투자(staged financing)
+  등 투자 관련 결과변수. 최근 가장 관심 있는 독립변수(IV)는 market traction.
+  특정 국가의 연구 설계·결론을 한국 시장에 적용·확장하는 연구에 관심이 많음.
+
+# 종속변수 / 독립변수 — Claude가 각 논문에서 이 변수들의 존재/관련성을 평가
+dependent_variables:
+  - follow-on investment / 후속투자
+  - staged financing / 단계적 투자
+  - investment amount / valuation / 투자 규모·기업가치
+  - survival / exit (IPO, M&A)
+independent_variables:
+  - market traction (사용자·매출·성장 지표)
+  - startup growth
+  - corporate governance
+  - machine learning 기반 신호·예측
+
+# 검색 키워드 — OpenAlex/S2 쿼리에 사용. 1차 키워드 스코어에도 사용.
+keywords:
+  - Venture Capital
+  - Entrepreneurial Finance
+  - Corporate Governance
+  - Follow-on Investment
+  - Staged Financing
+  - Startup Growth
+  - Machine Learning
+  - South Korea
+  - market traction
+
+# 저널 allowlist (선택). 비우면 모든 저널 허용. OpenAlex source 이름과 부분일치.
+# 채워두면 1차 스코어에 가산점(allowlist 외 논문도 LLM 단계까지는 통과 가능).
+journal_allowlist:
+  - Journal of Business Venturing
+  - Strategic Management Journal
+  - Research Policy
+  - Journal of Finance
+  - Review of Financial Studies
+  - Journal of Financial Economics
+  - Management Science
+  - Journal of Corporate Finance
+  - Small Business Economics
+  - Entrepreneurship Theory and Practice
+  - Journal of Management
+  - Venture Capital
+
+# 연도 cutoff
+year_from: 2013          # 종합 백필 시작 연도 (시작판). Da Rin·Hellmann·Puri(2013) 기점.
+recent_window_years: 0   # 0이면 미사용. >0이면 주간/월간에서 (현재연도 - N) 이후만.
+
+# 랭킹/요약 파라미터
+ranking:
+  keyword_top_n: 120     # 1차 키워드 스코어 통과 후 Claude 랭킹에 넘길 최대 후보 수
+  relevance_threshold: 60  # 0~100. 이 점수 이상만 요약·전달.
+  weekly_highlight_n: 8    # 텔레그램 주간 알림에 실을 상위 논문 수
+
+# Claude 모델
+model: claude-sonnet-4-6

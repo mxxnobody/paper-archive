@@ -1,0 +1,19 @@
+# 고전 canon — 2013 이전 staged financing/후속투자 이론의 기초 문헌.
+# 백필 시 1회 적재. DOI로 OpenAlex에서 메타데이터를 조회한다.
+# 관련도 임계값을 우회하고 무조건 포함된다(canon = true 태그).
+# 아래 DOI는 OpenAlex 조회로 검증됨. 추가/수정하려면 이 리스트만 편집하세요.
+
+canon:
+  - doi: 10.1111/j.1540-6261.1995.tb05185.x   # Gompers (1995) Optimal Investment, Monitoring, and the Staging of VC
+    note: staged financing 고전 (JF)
+  - doi: 10.1111/1540-6261.00419              # Hellmann & Puri (2002) VC and the Professionalization of Start-up Firms
+    note: VC의 스타트업 전문화 효과 (JF)
+  - doi: 10.1111/1467-937X.00245              # Kaplan & Strömberg (2003) Financial Contracting Theory Meets the Real World
+    note: VC 계약·단계 이론 (RES)
+  - doi: 10.1111/j.1540-6261.2007.01291.x     # Sørensen (2007) How Smart Is Smart Money?
+    note: VC 선택 vs 부가가치, 매칭모형 (JF)
+  - doi: 10.1111/j.1540-6261.2007.01207.x     # Hochberg, Ljungqvist & Lu (2007) Whom You Know Matters
+    note: VC 네트워크와 투자성과 (JF)
+
+# 주: DOI가 OpenAlex에 없거나 틀리면 해당 항목은 경고 후 건너뜀(파이프라인은 계속).
+# 백필 1차 실행 로그에서 누락 DOI를 확인해 교정하세요.

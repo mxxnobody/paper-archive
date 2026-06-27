@@ -1,0 +1,26 @@
+[project]
+name = "paper-archive"
+version = "0.1.0"
+description = "VC/창업금융 논문 자동 큐레이션 파이프라인 (OpenAlex + Claude + Zotero + Telegram)"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27",
+    "PyYAML>=6.0",
+    "Jinja2>=3.1",
+    "anthropic>=0.40",
+    "pyzotero>=1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
