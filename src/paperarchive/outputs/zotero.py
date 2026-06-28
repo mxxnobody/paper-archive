@@ -14,7 +14,7 @@ from ..record import Entry
 log = logging.getLogger(__name__)
 
 NOTE_TAG = "auto-summary"   # 재실행 시 자식 노트 갱신 식별용
-TIER_SUBS = {1: "Tier 1", 2: "Tier 2", 3: "Tier 3", "F": "Foundational"}
+TIER_SUB_NAMES = {"Tier 1", "Tier 2", "Tier 3", "Foundational"}  # 정리(삭제) 대상
 
 
 def get_zotero():
@@ -140,44 +140,52 @@ def push(entries: list[Entry]) -> int:
     return len(created)
 
 
-def ensure_tier_subcollections(zot, parent: str) -> dict:
-    """parent 밑에 Tier 1/2/3 + Foundational 서브컬렉션을 보장하고 {tier: key} 반환."""
-    existing = {c["data"]["name"]: c["key"] for c in zot.everything(zot.collections_sub(parent))}
-    out = {}
-    for tier, name in TIER_SUBS.items():
-        if name in existing:
-            out[tier] = existing[name]
-        else:
-            resp = zot.create_collections([{"name": name, "parentCollection": parent}])
-            succ = resp.get("successful", {})
-            out[tier] = next(iter(succ.values()))["key"]
+def tier_callnumbers(store: list[dict]) -> dict:
+    """store(tier 부여됨)로부터 {doi(소문자): callNumber} 매핑 계산.
+
+    tier별 그룹화 후 relevance 내림차순 순위 → 'T{code}-{rank:03d}'.
+    code: 1/2/3, Foundational은 'F'(ASCII상 T3 뒤로 정렬). 순수 함수.
+    """
+    from collections import defaultdict
+    groups: dict = defaultdict(list)
+    for d in store:
+        groups[d.get("tier")].append(d)
+    out: dict = {}
+    for tier, ds in groups.items():
+        ranked = sorted((d for d in ds if d.get("doi")),
+                        key=lambda d: (d.get("relevance", 0), d.get("cited_by", 0)),
+                        reverse=True)
+        code = "F" if tier == "F" else str(tier)
+        for i, d in enumerate(ranked, 1):
+            out[d["doi"].lower()] = f"T{code}-{i:03d}"
     return out
 
 
+def delete_tier_subcollections(zot, parent: str) -> int:
+    """기존 Tier/Foundational 서브컬렉션 제거(항목은 부모에 남음). 삭제 수 반환."""
+    removed = 0
+    for c in zot.everything(zot.collections_sub(parent)):
+        if c["data"]["name"] in TIER_SUB_NAMES:
+            zot.delete_collection(c)
+            removed += 1
+    return removed
+
+
 def retier(store: list[dict]) -> int:
-    """store의 tier에 맞춰 Zotero 서브컬렉션 멤버십을 차분 동기화. 변경 항목 수 반환."""
+    """store의 tier에 맞춰 각 항목 Call Number를 설정(차분). 변경 항목 수 반환."""
     zot, parent = get_zotero()
     if zot is None or parent is None:
         return 0
-    subs = ensure_tier_subcollections(zot, parent)
-    sub_keys = set(subs.values())
-    doi2tier = {(d.get("doi") or "").lower(): d.get("tier") for d in store}
-
+    cn = tier_callnumbers(store)
     items = zot.everything(zot.collection_items_top(parent))
     changed = []
     for it in items:
         doi = (it["data"].get("DOI") or "").lower()
-        tier = doi2tier.get(doi)
-        target = subs.get(tier)
-        if target is None:
-            continue
-        cur = set(it["data"].get("collections", []))
-        desired = (cur - sub_keys) | {parent, target}  # 비-티어 멤버십 유지 + 올바른 티어
-        if cur != desired:
-            it["data"]["collections"] = list(desired)
+        want = cn.get(doi)
+        if want and it["data"].get("callNumber") != want:
+            it["data"]["callNumber"] = want
             changed.append(it)
-    # 배치 업데이트(항목별 version으로 충돌 안전)
-    for i in range(0, len(changed), 50):
+    for i in range(0, len(changed), 50):  # 항목별 version → 배치 충돌 없음
         zot.update_items(changed[i:i + 50])
-    log.info("Zotero retier: %d개 항목 이동.", len(changed))
+    log.info("Zotero retier: Call Number %d개 갱신.", len(changed))
     return len(changed)

@@ -64,7 +64,7 @@ def route(profile, entries, *, telegram_on: bool, highlight_n: int = 10,
     pushed = zotero.push(entries)
     print(f"✓ Zotero 추가: {pushed}편")
     moved = zotero.retier(store)
-    print(f"✓ Zotero 티어 동기화: {moved}개 이동")
+    print(f"✓ Zotero Call Number 갱신: {moved}개")
 
     if entries:
         ris_path = ris.write_ris(entries, ROOT / "exports" / f"{export_label or today_tag()}.ris")
