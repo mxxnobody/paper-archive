@@ -22,13 +22,11 @@ def _mailto() -> str | None:
 
 
 def weekly_selection(entries, processed, weekly_max):
-    """주간 드립 — 상위 weekly_max만 전달, 밀린 임계값이상은 seen 미기록(다음주 재경합).
+    """주간 — 상위 weekly_max만 전달, 나머지는 모두 seen 처리(초과분 폐기, 이월 없음).
 
-    (delivered, seen_add) 반환. seen_add = 전체 후보 - 이월(상한 초과 entries).
+    (delivered, seen_add) 반환. seen_add = 평가한 전체 후보(전달분 포함).
     """
-    delivered = entries[:weekly_max]
-    carried = {e.paper.key() for e in entries[weekly_max:]}
-    return delivered, processed - carried
+    return entries[:weekly_max], set(processed)
 
 
 def run(

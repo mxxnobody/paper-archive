@@ -27,13 +27,14 @@ def main():
     )
 
     delivered, seen_add = pipeline.weekly_selection(entries, processed, weekly_max)
-    carried = len(entries) - len(delivered)
+    dropped = len(entries) - len(delivered)
 
     print(f"\n=== 주간: 신규 {len(entries)}편 중 상위 {len(delivered)}편 전달"
-          f"{f' (이월 {carried}편)' if carried else ''} ===")
+          f"{f' (초과 {dropped}편 폐기)' if dropped else ''} ===")
 
-    _common.route(delivered, telegram_on=True, highlight_n=highlight_n,
-                  export_label="weekly_" + _common.today_tag())
+    _common.route(profile, delivered, telegram_on=True, highlight_n=highlight_n,
+                  export_label="weekly_" + _common.today_tag(),
+                  weekly_page=True, date_tag=_common.today_iso())
 
     save_seen(seen | seen_add)
 

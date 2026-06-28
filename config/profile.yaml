@@ -67,7 +67,9 @@ ranking:
   saturate_weight: 5       # 가중합이 이 값이면 관련도 기본점 100 도달
   keyword_top_n: 800       # prefilter 상위 컷. 넉넉히 잡아 누락 방지
   relevance_threshold: 80  # 0~100. 엄격 — 이 점수 이상만 전달 (canon은 무조건 통과)
-  weekly_max: 20           # 주간 1회 전달 상한(알림·Zotero·아카이브 공통). 초과분은 다음 주 이월
+  weekly_max: 20           # 주간 1회 전달 상한(알림·Zotero·아카이브 공통). 초과분은 폐기
   weekly_highlight_n: 10   # 텔레그램 주간 알림에 요약 실을 상위 논문 수(평균 ~10)
-  retidy_max: 200          # 기존 재정비 시 유지할 최대 편수(읽기 캐파)
+  retidy_max: 200          # 일회성 retidy 도구에서만 사용하는 최대 편수
+  tier1_size: 25           # Tier 1(최우선 정독) 편수
+  tier2_size: 75           # Tier 2 편수(이후는 Tier 3)
   per_keyword_fetch: 400   # 키워드별 OpenAlex 수집량

@@ -32,7 +32,7 @@ def main():
     )
     print(f"\n=== 백필: {len(entries)}편 선정 ===")
 
-    _common.route(entries, telegram_on=False, export_label="backfill_" + _common.today_tag())
+    _common.route(profile, entries, telegram_on=False, export_label="backfill_" + _common.today_tag())
 
     save_seen(seen | processed)
     print(f"✓ seen 갱신: {len(seen | processed)}개")

@@ -22,7 +22,7 @@ def main():
     )
     print(f"\n=== 월간 종합: {len(entries)}편 보강 ===")
 
-    _common.route(entries, telegram_on=False,
+    _common.route(profile, entries, telegram_on=False,
                   export_label="monthly_" + _common.today_tag())
 
     save_seen(seen | processed)

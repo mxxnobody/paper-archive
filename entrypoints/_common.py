@@ -25,27 +25,51 @@ def today_tag() -> str:
     return (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y%m%d")
 
 
+def today_iso() -> str:
+    from datetime import timedelta
+    return (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y-%m-%d")
+
+
 def site_url() -> str | None:
     return os.environ.get("SITE_URL")  # 예: https://user.github.io/paper-archive/
 
 
-def route(entries, *, telegram_on: bool, highlight_n: int = 8, export_label: str = ""):
-    """엔트리를 HTML/Zotero/RIS(/Telegram)로 전달."""
+def _weekly_url(date_tag: str) -> str | None:
+    base = site_url()
+    if not base:
+        return None
+    return f"{base.rstrip('/')}/weekly/{date_tag}.html"
+
+
+def route(profile, entries, *, telegram_on: bool, highlight_n: int = 10,
+          export_label: str = "", weekly_page: bool = False, date_tag: str = ""):
+    """엔트리를 HTML(티어)/주간페이지/Zotero(티어 동기화)/RIS/Telegram로 전달."""
     from paperarchive.outputs import html_site, ris, telegram, zotero
 
+    rcfg = profile.get("ranking", {})
     site_dir = ROOT / "site"
-    html_site.update_site(site_dir, entries, now_kst_str())
-    print(f"✓ HTML 갱신: {site_dir/'index.html'} (총 {len(html_site.load_store(site_dir))}편)")
+
+    # 누적 저장 + 티어 부여 + 메인 렌더 → 전체 store 반환
+    store = html_site.update_site(site_dir, entries, now_kst_str(),
+                                  tier1=rcfg.get("tier1_size", 25),
+                                  tier2=rcfg.get("tier2_size", 75))
+    print(f"✓ HTML 갱신: {site_dir/'index.html'} (총 {len(store)}편)")
+
+    link = site_url()
+    if weekly_page:
+        wp = html_site.render_weekly(site_dir, entries, date_tag)
+        link = _weekly_url(date_tag)
+        print(f"✓ 주간 페이지: {wp}")
 
     pushed = zotero.push(entries)
     print(f"✓ Zotero 추가: {pushed}편")
+    moved = zotero.retier(store)
+    print(f"✓ Zotero 티어 동기화: {moved}개 이동")
 
     if entries:
-        exports = ROOT / "exports"
-        label = export_label or today_tag()
-        ris_path = ris.write_ris(entries, exports / f"{label}.ris")
+        ris_path = ris.write_ris(entries, ROOT / "exports" / f"{export_label or today_tag()}.ris")
         print(f"✓ RIS export: {ris_path}")
 
     if telegram_on:
-        ok = telegram.send(entries, highlight_n=highlight_n, site_url=site_url())
+        ok = telegram.send(entries, highlight_n=highlight_n, site_url=link)
         print(f"✓ 텔레그램: {'발송' if ok else '건너뜀'}")

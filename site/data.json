@@ -48,7 +48,8 @@
       "method": "",
       "caveats": "상관≠인과 주의"
     },
-    "_key": "doi:10.1016/j.respol.2025.105402"
+    "_key": "doi:10.1016/j.respol.2025.105402",
+    "tier": 2
   },
   {
     "title": "When digital meets traditional financial intermediaries: How equity crowdfunding shapes venture capital value added",
@@ -104,7 +105,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.irfa.2026.105152"
+    "_key": "doi:10.1016/j.irfa.2026.105152",
+    "tier": 2
   },
   {
     "title": "Leveraging AI and Big Data for ESG Due Diligence in Entrepreneurial Finance",
@@ -156,7 +158,8 @@
       "method": "머신러닝",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.4018/979-8-3373-5172-8.ch014"
+    "_key": "doi:10.4018/979-8-3373-5172-8.ch014",
+    "tier": 2
   },
   {
     "title": "Evolving ventures and venture capital syndicate resource diversity",
@@ -207,7 +210,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-026-01223-6"
+    "_key": "doi:10.1007/s11187-026-01223-6",
+    "tier": 2
   },
   {
     "title": "The Founders’ Guide to Corporate Venture Capital",
@@ -260,7 +264,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.4324/9781003758280"
+    "_key": "doi:10.4324/9781003758280",
+    "tier": 2
   },
   {
     "title": "Tokenization Of Real-World Assets (Rwa) And The Democratization Of Entrepreneurial Finance",
@@ -313,7 +318,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6325339"
+    "_key": "doi:10.2139/ssrn.6325339",
+    "tier": 2
   },
   {
     "title": "The Rise of Crowdfunding as a Source of Entrepreneurial Finance in Africa: Review of Determinants and Challenges",
@@ -371,7 +377,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.4324/9781003532422-13"
+    "_key": "doi:10.4324/9781003532422-13",
+    "tier": 2
   },
   {
     "title": "Viability is Not a Property of Startups: Reframing Entrepreneurial Finance Through Investment Conditions",
@@ -417,7 +424,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6444128"
+    "_key": "doi:10.2139/ssrn.6444128",
+    "tier": 2
   },
   {
     "title": "Funding Black High‐Growth Startups",
@@ -458,7 +466,8 @@
       "method": "매칭",
       "caveats": ""
     },
-    "_key": "doi:10.1111/jofi.70039"
+    "_key": "doi:10.1111/jofi.70039",
+    "tier": 2
   },
   {
     "title": "Gender differences in entrepreneurial equity financing—a systematic literature review",
@@ -496,7 +505,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-024-00989-x"
+    "_key": "doi:10.1007/s11187-024-00989-x",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial finance in an extended period of crises",
@@ -534,7 +544,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-025-01007-4"
+    "_key": "doi:10.1007/s11187-025-01007-4",
+    "tier": 2
   },
   {
     "title": "What influences equity investors’ decision-making in entrepreneurial finance: a systematic literature review 1983–2022",
@@ -570,7 +581,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2025.2496743"
+    "_key": "doi:10.1080/13691066.2025.2496743",
+    "tier": 2
   },
   {
     "title": "Optimizing investment period length and strategies for later stage venture capital staged financing portfolio",
@@ -618,7 +630,8 @@
       "method": "",
       "caveats": "상관≠인과 주의"
     },
-    "_key": "doi:10.1080/1351847x.2025.2532548"
+    "_key": "doi:10.1080/1351847x.2025.2532548",
+    "tier": 2
   },
   {
     "title": "Complementary funding: how location links crowdfunding and venture capital",
@@ -659,7 +672,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-025-01106-2"
+    "_key": "doi:10.1007/s11187-025-01106-2",
+    "tier": 2
   },
   {
     "title": "The role of decentralized and traditional entrepreneurial finance in startups financing: an analysis of ICO-funded startups",
@@ -700,7 +714,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1007/s11187-025-01153-9"
+    "_key": "doi:10.1007/s11187-025-01153-9",
+    "tier": 2
   },
   {
     "title": "Political alignment in entrepreneurial teams: Homophily in venture formation and associations with startup success",
@@ -750,7 +765,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1002/smj.70044"
+    "_key": "doi:10.1002/smj.70044",
+    "tier": 2
   },
   {
     "title": "African Startup Accelerators: How University Partnerships Signal Venture Quality and Drive Funding Growth Amid Capital Scarcity",
@@ -807,7 +823,8 @@
       "method": "패널분석, 회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.11648/j.sjbm.20251304.12"
+    "_key": "doi:10.11648/j.sjbm.20251304.12",
+    "tier": 2
   },
   {
     "title": "Three essays on social impact venture capital",
@@ -861,7 +878,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5287/ora-noxgrz6r5"
+    "_key": "doi:10.5287/ora-noxgrz6r5",
+    "tier": 2
   },
   {
     "title": "Innovative Startup Financing Models: Venture Capital and Crowdfunding",
@@ -901,7 +919,8 @@
       "method": "회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.32479/ijefi.19264"
+    "_key": "doi:10.32479/ijefi.19264",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance: Bridging Innovation and Capital for Sustainable Growth",
@@ -958,7 +977,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.71097/ijaidr.v16.i1.1416"
+    "_key": "doi:10.71097/ijaidr.v16.i1.1416",
+    "tier": 2
   },
   {
     "title": "Crowdfunding as an Alternative Financing Mechanism for Early-Stage Entrepreneurs: A Pathway to Financial Inclusion and Startup Growth the Democratization of Entrepreneurial Finance",
@@ -1000,7 +1020,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.63680/ijsate0825021.35"
+    "_key": "doi:10.63680/ijsate0825021.35",
+    "tier": 2
   },
   {
     "title": "Guest editorial: Digital entrepreneurial finance and new approaches to venture funding",
@@ -1035,7 +1056,8 @@
       "method": "이중차분(DiD), 머신러닝",
       "caveats": "DiD: 평행추세 가정 검토, 예측≠인과 주의"
     },
-    "_key": "doi:10.1108/jsbed-06-2025-610"
+    "_key": "doi:10.1108/jsbed-06-2025-610",
+    "tier": 3
   },
   {
     "title": "&lt;b&gt;The Impact of Financial Literacy and Entrepreneurial Mindset on Startup Growth in India&lt;/b&gt;",
@@ -1087,7 +1109,8 @@
       "method": "",
       "caveats": "자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.56442/v6qb5v21"
+    "_key": "doi:10.56442/v6qb5v21",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial finance and sustainability: Do institutional investors impact the ESG performance of SMEs?",
@@ -1125,7 +1148,8 @@
       "method": "이중차분(DiD)",
       "caveats": "DiD: 평행추세 가정 검토"
     },
-    "_key": "doi:10.1016/j.jbvi.2024.e00498"
+    "_key": "doi:10.1016/j.jbvi.2024.e00498",
+    "tier": 2
   },
   {
     "title": "The sunk cost fallacy in venture capital staging: Decision-making dynamics for follow-on investment rounds",
@@ -1171,7 +1195,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jcorpfin.2024.102589"
+    "_key": "doi:10.1016/j.jcorpfin.2024.102589",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance and Sustainability: Do Institutional Investors Impact the ESG Performance of SMEs?",
@@ -1214,7 +1239,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.4792339"
+    "_key": "doi:10.2139/ssrn.4792339",
+    "tier": 2
   },
   {
     "title": "The role of the university entrepreneurial ecosystem in entrepreneurial finance: case studies of UK innovation knowledge centres",
@@ -1262,7 +1288,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2023.2205606"
+    "_key": "doi:10.1080/13691066.2023.2205606",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial finance and regional ecosystem emergence",
@@ -1299,7 +1326,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-023-00827-6"
+    "_key": "doi:10.1007/s11187-023-00827-6",
+    "tier": 2
   },
   {
     "title": "Predicting success in entrepreneurial finance research",
@@ -1341,7 +1369,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1016/j.jcorpfin.2023.102359"
+    "_key": "doi:10.1016/j.jcorpfin.2023.102359",
+    "tier": 2
   },
   {
     "title": "Academic institutions and the changing entrepreneurial finance landscape",
@@ -1389,7 +1418,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2023.2225753"
+    "_key": "doi:10.1080/13691066.2023.2225753",
+    "tier": 2
   },
   {
     "title": "Evolution and trends in entrepreneurial finance: reflections and insights from COVID-19",
@@ -1432,7 +1462,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2023.2210757"
+    "_key": "doi:10.1080/13691066.2023.2210757",
+    "tier": 2
   },
   {
     "title": "A Machine Learning Approach to Entrepreneurial Finance Modelling",
@@ -1478,7 +1509,8 @@
       "method": "머신러닝",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1007/978-3-031-31241-0_2"
+    "_key": "doi:10.1007/978-3-031-31241-0_2",
+    "tier": 2
   },
   {
     "title": "The role of data for AI startup growth",
@@ -1518,7 +1550,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.respol.2022.104513"
+    "_key": "doi:10.1016/j.respol.2022.104513",
+    "tier": 2
   },
   {
     "title": "Signaling in the context of early-stage equity financing: review and directions",
@@ -1562,7 +1595,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2022.2063092"
+    "_key": "doi:10.1080/13691066.2022.2063092",
+    "tier": 2
   },
   {
     "title": "Venture capital finance of innovation",
@@ -1599,7 +1633,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.4337/9781839106996.00070"
+    "_key": "doi:10.4337/9781839106996.00070",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance and Governance",
@@ -1650,7 +1685,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1093/acrefore/9780190224851.013.384"
+    "_key": "doi:10.1093/acrefore/9780190224851.013.384",
+    "tier": 2
   },
   {
     "title": "Pioneering management buy-out and entrepreneurial finance research: Mike Wright’s research legacy",
@@ -1694,7 +1730,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-022-00635-4"
+    "_key": "doi:10.1007/s11187-022-00635-4",
+    "tier": 2
   },
   {
     "title": "Do Business Angels’ Investments Make It Easier to Raise Follow‐on Venture Capital Financing? An Analysis of the Relevance of Business Angels’ Investment Practices",
@@ -1738,7 +1775,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/1467-8551.12526"
+    "_key": "doi:10.1111/1467-8551.12526",
+    "tier": 2
   },
   {
     "title": "Start-up subsidies and the sources of venture capital",
@@ -1785,7 +1823,8 @@
       "method": "매칭",
       "caveats": "상관≠인과 주의"
     },
-    "_key": "doi:10.1016/j.jbvi.2021.e00272"
+    "_key": "doi:10.1016/j.jbvi.2021.e00272",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance: Emerging Approaches Using Machine Learning and Big Data",
@@ -1818,7 +1857,8 @@
       "method": "머신러닝",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1561/0300000099"
+    "_key": "doi:10.1561/0300000099",
+    "tier": 2
   },
   {
     "title": "Public Entrepreneurial Finance Around the Globe",
@@ -1871,7 +1911,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.3838511"
+    "_key": "doi:10.2139/ssrn.3838511",
+    "tier": 2
   },
   {
     "title": "Editorial: Entrepreneurial Finance and the Legacy of Mike Wright",
@@ -1905,7 +1946,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/1467-8551.12535"
+    "_key": "doi:10.1111/1467-8551.12535",
+    "tier": 2
   },
   {
     "title": "Value-added Activities of Venture Capitals in Entrepreneurial Finance: Evidence from the Growth of Flipkart",
@@ -1944,7 +1986,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/0972820121998120"
+    "_key": "doi:10.1177/0972820121998120",
+    "tier": 2
   },
   {
     "title": "Decision-making style in entrepreneurial finance and growth",
@@ -1989,7 +2032,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-021-00528-y"
+    "_key": "doi:10.1007/s11187-021-00528-y",
+    "tier": 2
   },
   {
     "title": "The Use of Signals in New-Venture Financing: A Review and Research Agenda",
@@ -2042,7 +2086,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/0149206320911090"
+    "_key": "doi:10.1177/0149206320911090",
+    "tier": 1
   },
   {
     "title": "Entrepreneurial Finance and Moral Hazard: Evidence from Token Offerings",
@@ -2093,7 +2138,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbusvent.2020.106001"
+    "_key": "doi:10.1016/j.jbusvent.2020.106001",
+    "tier": 1
   },
   {
     "title": "Why do startups pursue initial coin offerings (ICOs)? The role of economic drivers and social identity on funding choice",
@@ -2136,7 +2182,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-020-00337-9"
+    "_key": "doi:10.1007/s11187-020-00337-9",
+    "tier": 2
   },
   {
     "title": "Money for female entrepreneurs does not grow on trees: start-ups’ financing implications in times of COVID-19",
@@ -2189,7 +2236,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/jeee-06-2020-0172"
+    "_key": "doi:10.1108/jeee-06-2020-0172",
+    "tier": 2
   },
   {
     "title": "Venture Capital, Credit, and FinTech Start-Up Formation: A Cross-Country Study",
@@ -2229,7 +2277,8 @@
       "method": "회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.1177/1042258720972652"
+    "_key": "doi:10.1177/1042258720972652",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance",
@@ -2257,7 +2306,8 @@
       "method": "머신러닝",
       "caveats": "예측≠인과 주의, 자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.1515/9781503609129"
+    "_key": "doi:10.1515/9781503609129",
+    "tier": 2
   },
   {
     "title": "On the social and conceptual structure of the 50-year research landscape in entrepreneurial finance",
@@ -2301,7 +2351,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s43546-020-00002-z"
+    "_key": "doi:10.1007/s43546-020-00002-z",
+    "tier": 2
   },
   {
     "title": "P2P lending and outside entrepreneurial finance",
@@ -2343,7 +2394,8 @@
       "method": "회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.1080/1351847x.2020.1842223"
+    "_key": "doi:10.1080/1351847x.2020.1842223",
+    "tier": 2
   },
   {
     "title": "Does venture capital syndication affect mergers and acquisitions?",
@@ -2394,7 +2446,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jcorpfin.2020.101851"
+    "_key": "doi:10.1016/j.jcorpfin.2020.101851",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial finance journeys: embeddedness and the finance escalator",
@@ -2440,7 +2493,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2020.1767756"
+    "_key": "doi:10.1080/13691066.2020.1767756",
+    "tier": 2
   },
   {
     "title": "New Sources of Entrepreneurial Finance",
@@ -2480,7 +2534,8 @@
       "method": "머신러닝",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1007/978-3-030-53914-6_11"
+    "_key": "doi:10.1007/978-3-030-53914-6_11",
+    "tier": 2
   },
   {
     "title": "An analysis of timing decision in venture capital staged financing: evidence from India",
@@ -2532,7 +2587,8 @@
       "method": "생존분석",
       "caveats": ""
     },
-    "_key": "doi:10.1108/mrr-09-2019-0424"
+    "_key": "doi:10.1108/mrr-09-2019-0424",
+    "tier": 2
   },
   {
     "title": "Initial Coin Offerings: Financing Growth with Cryptocurrency Token Sales",
@@ -2584,7 +2640,8 @@
       "method": "도구변수(IV)",
       "caveats": "도구변수: 배제제약·약한도구 검토, 예측≠인과 주의"
     },
-    "_key": "doi:10.1093/rfs/hhz131"
+    "_key": "doi:10.1093/rfs/hhz131",
+    "tier": 1
   },
   {
     "title": "Does equity crowdfunding democratize entrepreneurial finance?",
@@ -2629,7 +2686,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-019-00188-z"
+    "_key": "doi:10.1007/s11187-019-00188-z",
+    "tier": 1
   },
   {
     "title": "Unicorns, Cheshire cats, and the new dilemmas of entrepreneurial finance",
@@ -2678,7 +2736,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2018.1517430"
+    "_key": "doi:10.1080/13691066.2018.1517430",
+    "tier": 1
   },
   {
     "title": "The role of venture capital in the emerging entrepreneurial finance ecosystem: future threats and opportunities",
@@ -2721,7 +2780,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2019.1608697"
+    "_key": "doi:10.1080/13691066.2019.1608697",
+    "tier": 1
   },
   {
     "title": "The evolution of equity crowdfunding: Insights from co-investments of angels and the crowd",
@@ -2761,7 +2821,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.respol.2019.01.003"
+    "_key": "doi:10.1016/j.respol.2019.01.003",
+    "tier": 1
   },
   {
     "title": "Reducing information frictions in venture capital: The role of new venture competitions",
@@ -2801,7 +2862,8 @@
       "method": "회귀불연속(RDD), 회귀분석",
       "caveats": "RDD: 대역폭·경계조작 민감도, 예측≠인과 주의"
     },
-    "_key": "doi:10.1016/j.jfineco.2019.10.009"
+    "_key": "doi:10.1016/j.jfineco.2019.10.009",
+    "tier": 1
   },
   {
     "title": "Crowdfunding, business angels, and venture capital: an exploratory study of the concept of the funding trajectory",
@@ -2843,7 +2905,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2019.1599188"
+    "_key": "doi:10.1080/13691066.2019.1599188",
+    "tier": 2
   },
   {
     "title": "<i>Venture Capital</i> 20 years on: reflections on the evolution of a field",
@@ -2884,7 +2947,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2019.1562627"
+    "_key": "doi:10.1080/13691066.2019.1562627",
+    "tier": 2
   },
   {
     "title": "Emerging trends in entrepreneurial finance",
@@ -2916,7 +2980,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2019.1607167"
+    "_key": "doi:10.1080/13691066.2019.1607167",
+    "tier": 2
   },
   {
     "title": "Collaboration in Entrepreneurial Finance",
@@ -2961,7 +3026,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1093/oxfordhb/9780190633899.013.32"
+    "_key": "doi:10.1093/oxfordhb/9780190633899.013.32",
+    "tier": 2
   },
   {
     "title": "Initial coin offerings (ICOs) to finance new ventures",
@@ -3011,7 +3077,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbusvent.2018.09.007"
+    "_key": "doi:10.1016/j.jbusvent.2018.09.007",
+    "tier": 1
   },
   {
     "title": "The evolution and adoption of equity crowdfunding: entrepreneur and investor entry into a new market",
@@ -3052,7 +3119,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-018-0009-5"
+    "_key": "doi:10.1007/s11187-018-0009-5",
+    "tier": 1
   },
   {
     "title": "Signaling for more money: The roles of founders' human capital and investor prominence in resource acquisition across different stages of firm development",
@@ -3102,7 +3170,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbusvent.2018.03.001"
+    "_key": "doi:10.1016/j.jbusvent.2018.03.001",
+    "tier": 1
   },
   {
     "title": "Third-party signals in equity crowdfunding: the role of prior financing",
@@ -3146,7 +3215,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-018-0125-2"
+    "_key": "doi:10.1007/s11187-018-0125-2",
+    "tier": 1
   },
   {
     "title": "Equity crowdfunding in Germany and the United Kingdom: Follow‐up funding and firm failure",
@@ -3196,7 +3266,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1111/corg.12260"
+    "_key": "doi:10.1111/corg.12260",
+    "tier": 1
   },
   {
     "title": "Entrepreneurial finance: Unifying themes and future directions",
@@ -3245,7 +3316,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jcorpfin.2018.01.011"
+    "_key": "doi:10.1016/j.jcorpfin.2018.01.011",
+    "tier": 1
   },
   {
     "title": "Financial development and the geographies of startup cities: evidence from China",
@@ -3287,7 +3359,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-017-9983-2"
+    "_key": "doi:10.1007/s11187-017-9983-2",
+    "tier": 2
   },
   {
     "title": "Start-ups, entrepreneurial networks and equity crowdfunding: A processual perspective",
@@ -3339,7 +3412,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.indmarman.2018.02.003"
+    "_key": "doi:10.1016/j.indmarman.2018.02.003",
+    "tier": 2
   },
   {
     "title": "Unleashing main street entrepreneurship: Crowdfunding, venture capital, and the democratization of new venture investments",
@@ -3385,7 +3459,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-018-0097-2"
+    "_key": "doi:10.1007/s11187-018-0097-2",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance : The Art and Science of Growing Ventures",
@@ -3423,7 +3498,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "title:entrepreneurialfinancetheartandscienceofgrowingventures"
+    "_key": "title:entrepreneurialfinancetheartandscienceofgrowingventures",
+    "tier": 2
   },
   {
     "title": "Emerging Trends in Entrepreneurial Finance: The Rise of ICOs",
@@ -3462,7 +3538,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.7172/1733-9758.2018.27.6"
+    "_key": "doi:10.7172/1733-9758.2018.27.6",
+    "tier": 2
   },
   {
     "title": "Patent as a Quality Signal in Entrepreneurial Finance: A Look Beneath the Surface",
@@ -3510,7 +3587,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/ajfs.12211"
+    "_key": "doi:10.1111/ajfs.12211",
+    "tier": 2
   },
   {
     "title": "New players in entrepreneurial finance and why they are there",
@@ -3556,7 +3634,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-016-9826-6"
+    "_key": "doi:10.1007/s11187-016-9826-6",
+    "tier": 1
   },
   {
     "title": "A Review and Road Map of Entrepreneurial Equity Financing Research: Venture Capital, Corporate Venture Capital, Angel Investment, Crowdfunding, and Accelerators",
@@ -3611,7 +3690,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/0149206317690584"
+    "_key": "doi:10.1177/0149206317690584",
+    "tier": 1
   },
   {
     "title": "The globalization of angel investments: Evidence across countries",
@@ -3653,7 +3733,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jfineco.2017.05.012"
+    "_key": "doi:10.1016/j.jfineco.2017.05.012",
+    "tier": 1
   },
   {
     "title": "Finance or philanthropy? Exploring the motivations and criteria of impact investors",
@@ -3704,7 +3785,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/srj-08-2016-0135"
+    "_key": "doi:10.1108/srj-08-2016-0135",
+    "tier": 1
   },
   {
     "title": "Does Crowdfunding Benefit Entrepreneurs and Venture Capital Investors?",
@@ -3750,7 +3832,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.2971685"
+    "_key": "doi:10.2139/ssrn.2971685",
+    "tier": 2
   },
   {
     "title": "Do Corporate Investors Affect Entrepreneurs’ IP Portfolio? Entrepreneurial Finance and Intellectual Property in New Firms",
@@ -3799,7 +3882,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/1042258717738247"
+    "_key": "doi:10.1177/1042258717738247",
+    "tier": 2
   },
   {
     "title": "Staged financing: a trade-off theory of holdup and option value",
@@ -3842,7 +3926,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s00712-017-0524-x"
+    "_key": "doi:10.1007/s00712-017-0524-x",
+    "tier": 2
   },
   {
     "title": "Equity retention and social network theory in equity crowdfunding",
@@ -3892,7 +3977,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-016-9710-4"
+    "_key": "doi:10.1007/s11187-016-9710-4",
+    "tier": 1
   },
   {
     "title": "Entrepreneurial finance: new frontiers of research and practice",
@@ -3936,7 +4022,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2016.1259733"
+    "_key": "doi:10.1080/13691066.2016.1259733",
+    "tier": 1
   },
   {
     "title": "De-segmenting research in entrepreneurial finance",
@@ -3969,7 +4056,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2016.1225910"
+    "_key": "doi:10.1080/13691066.2016.1225910",
+    "tier": 2
   },
   {
     "title": "Early-stage entrepreneurial financing: A signaling perspective",
@@ -4019,7 +4107,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbankfin.2016.03.004"
+    "_key": "doi:10.1016/j.jbankfin.2016.03.004",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial beacons: The <scp>Y</scp> ale endowment, run‐ups, and the growth of venture capital",
@@ -4065,7 +4154,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1002/smj.2508"
+    "_key": "doi:10.1002/smj.2508",
+    "tier": 2
   },
   {
     "title": "Decision biases and entrepreneurial finance",
@@ -4117,7 +4207,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11187-016-9739-4"
+    "_key": "doi:10.1007/s11187-016-9739-4",
+    "tier": 2
   },
   {
     "title": "Better Together? Signaling Interactions in New Venture Pursuit of Initial External Capital",
@@ -4169,7 +4260,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5465/amj.2013.0100"
+    "_key": "doi:10.5465/amj.2013.0100",
+    "tier": 1
   },
   {
     "title": "Resource accumulation through economic ties: Evidence from venture capital",
@@ -4227,7 +4319,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jfineco.2015.06.008"
+    "_key": "doi:10.1016/j.jfineco.2015.06.008",
+    "tier": 2
   },
   {
     "title": "Ethics in Entrepreneurial Finance: Exploring Problems in Venture Partner Entry and Exit",
@@ -4267,7 +4360,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s10551-015-2873-0"
+    "_key": "doi:10.1007/s10551-015-2873-0",
+    "tier": 2
   },
   {
     "title": "Dynamics of bank relationships in entrepreneurial finance",
@@ -4307,7 +4401,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jcorpfin.2015.07.006"
+    "_key": "doi:10.1016/j.jcorpfin.2015.07.006",
+    "tier": 2
   },
   {
     "title": "Entrepreneurial Finance and the Creation of Value",
@@ -4357,7 +4452,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.4018/978-1-4666-8348-8.ch030"
+    "_key": "doi:10.4018/978-1-4666-8348-8.ch030",
+    "tier": 2
   },
   {
     "title": "Exploring entrepreneurial legitimacy in reward-based crowdfunding",
@@ -4410,7 +4506,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2014.916512"
+    "_key": "doi:10.1080/13691066.2014.916512",
+    "tier": 1
   },
   {
     "title": "Patents as Signals for Startup Financing",
@@ -4453,7 +4550,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1111/joie.12025"
+    "_key": "doi:10.1111/joie.12025",
+    "tier": 1
   },
   {
     "title": "Entrepreneurial Finance and Innovation: An Introduction and Agenda for Future Research",
@@ -4498,7 +4596,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1093/rfs/hht063"
+    "_key": "doi:10.1093/rfs/hht063",
+    "tier": 1
   },
   {
     "title": "Funding the growth of UK technology-based small firms since the financial crash: are there breakages in the finance escalator?",
@@ -4540,7 +4639,8 @@
       "method": "",
       "caveats": "자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.1080/13691066.2013.804755"
+    "_key": "doi:10.1080/13691066.2013.804755",
+    "tier": 1
   },
   {
     "title": "Small Firms, Big Patents? Estimating Patent Value Using Data on Israeli Start‐ups’ Financing Rounds",
@@ -4585,7 +4685,8 @@
       "method": "패널분석",
       "caveats": ""
     },
-    "_key": "doi:10.1111/emre.12015"
+    "_key": "doi:10.1111/emre.12015",
+    "tier": 2
   },
   {
     "title": "The Role of Agents in Private Entrepreneurial Finance",
@@ -4635,7 +4736,8 @@
       "method": "매칭",
       "caveats": ""
     },
-    "_key": "doi:10.1111/etap.12043"
+    "_key": "doi:10.1111/etap.12043",
+    "tier": 2
   },
   {
     "title": "Venture Capital: An International Journal of Entrepreneurial Finance",
@@ -4666,7 +4768,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13691066.2015.1110933"
+    "_key": "doi:10.1080/13691066.2015.1110933",
+    "tier": 3
   },
   {
     "title": "Challenges of Entrepreneurial Finance: A Systematic Analysis of Empirical Researches",
@@ -4707,7 +4810,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/978-3-319-90394-1_18"
+    "_key": "doi:10.1007/978-3-319-90394-1_18",
+    "tier": 3
   },
   {
     "title": "ESG consideration in venture capital: drivers, strategies and barriers",
@@ -4756,7 +4860,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/sef-06-2023-0380"
+    "_key": "doi:10.1108/sef-06-2023-0380",
+    "tier": 3
   },
   {
     "title": "Preplanned exit strategies in venture capital",
@@ -4803,7 +4908,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.euroecorev.2008.01.001"
+    "_key": "doi:10.1016/j.euroecorev.2008.01.001",
+    "tier": 3
   },
   {
     "title": "Blockchain and smart contracts: transforming digital entrepreneurial finance and venture funding",
@@ -4841,7 +4947,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/jsbed-12-2023-0584"
+    "_key": "doi:10.1108/jsbed-12-2023-0584",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial finance in Europe and the Russian war against Ukraine",
@@ -4875,7 +4982,8 @@
       "method": "",
       "caveats": "자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.1007/s10961-024-10067-9"
+    "_key": "doi:10.1007/s10961-024-10067-9",
+    "tier": 3
   },
   {
     "title": "Inclusive digital finance: the industry of equity crowdfunding",
@@ -4918,7 +5026,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s10961-021-09875-0"
+    "_key": "doi:10.1007/s10961-021-09875-0",
+    "tier": 3
   },
   {
     "title": "Family firms in entrepreneurial finance: The case of corporate venture capital",
@@ -4954,7 +5063,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbankfin.2025.107391"
+    "_key": "doi:10.1016/j.jbankfin.2025.107391",
+    "tier": 3
   },
   {
     "title": "Start-up funding negotiations with venture capitalists: understanding the behaviors and strategies of experienced entrepreneurs",
@@ -4994,7 +5104,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/ijebr-06-2024-0615"
+    "_key": "doi:10.1108/ijebr-06-2024-0615",
+    "tier": 3
   },
   {
     "title": "Priors, Experiments, Learning and Persuasion in (Bayesian) Entrepreneurial Finance",
@@ -5030,7 +5141,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.5004860"
+    "_key": "doi:10.2139/ssrn.5004860",
+    "tier": 3
   },
   {
     "title": "Emotions and entrepreneurial finance: Analysis of venture capitalists’ and business angels’ digital footprints on Twitter",
@@ -5064,7 +5176,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/s11365-024-01018-9"
+    "_key": "doi:10.1007/s11365-024-01018-9",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance",
@@ -5105,7 +5218,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/978-3-031-19554-9_15"
+    "_key": "doi:10.1007/978-3-031-19554-9_15",
+    "tier": 3
   },
   {
     "title": "Does Investor Gender Matter for the Success of Female Entrepreneurs? Gender Homophily and the Stigma of Incompetence in Entrepreneurial Finance",
@@ -5147,7 +5261,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1287/orsc.2022.1594"
+    "_key": "doi:10.1287/orsc.2022.1594",
+    "tier": 3
   },
   {
     "title": "Private or Public Equity? The Evolving Entrepreneurial Finance Landscape",
@@ -5197,7 +5312,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1146/annurev-financial-101821-121115"
+    "_key": "doi:10.1146/annurev-financial-101821-121115",
+    "tier": 3
   },
   {
     "title": "Does blockchain technology democratize entrepreneurial finance? An empirical comparison of ICOs, venture capital, and REITs",
@@ -5244,7 +5360,8 @@
       "method": "",
       "caveats": "상관≠인과 주의"
     },
-    "_key": "doi:10.1080/10438599.2020.1843991"
+    "_key": "doi:10.1080/10438599.2020.1843991",
+    "tier": 3
   },
   {
     "title": "Does Crowdfunding Benefit Entrepreneurs and Venture Capital Investors?",
@@ -5279,7 +5396,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1287/msom.2019.0835"
+    "_key": "doi:10.1287/msom.2019.0835",
+    "tier": 3
   },
   {
     "title": "Alumni Networks in Venture Capital Financing",
@@ -5324,7 +5442,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1017/s0022109025102354"
+    "_key": "doi:10.1017/s0022109025102354",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance Strategies for Startup Success",
@@ -5354,7 +5473,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.60079/aefs.v2i2.283"
+    "_key": "doi:10.60079/aefs.v2i2.283",
+    "tier": 3
   },
   {
     "title": "Has persistence persisted in private equity? Evidence from buyout and venture capital funds",
@@ -5406,7 +5526,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jcorpfin.2023.102361"
+    "_key": "doi:10.1016/j.jcorpfin.2023.102361",
+    "tier": 3
   },
   {
     "title": "The Economics of Startup Business Finance: An Investigation through the Lens of Financial Growth Cycle Theory",
@@ -5443,7 +5564,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.59091/1410-8046.2071"
+    "_key": "doi:10.59091/1410-8046.2071",
+    "tier": 3
   },
   {
     "title": "Systematic Literature Review of Sustainable Finance: Implications for Entrepreneurial Finance through Venture Capitals (VC)",
@@ -5484,7 +5606,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.28934/ea.23.56.2.pp68-83"
+    "_key": "doi:10.28934/ea.23.56.2.pp68-83",
+    "tier": 3
   },
   {
     "title": "The Role of Entrepreneurial Finance in Corporate Social Responsibility and New Venture Performance in an Emerging Market",
@@ -5527,7 +5650,8 @@
       "method": "",
       "caveats": "자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.1177/09713557211025655"
+    "_key": "doi:10.1177/09713557211025655",
+    "tier": 3
   },
   {
     "title": "Sources of finance for tech startups over its lifecycle: what determines their approach of sources and its success?",
@@ -5561,7 +5685,8 @@
       "method": "회귀분석",
       "caveats": "자기응답·표본 편의 가능"
     },
-    "_key": "doi:10.1108/ijoem-06-2020-0705"
+    "_key": "doi:10.1108/ijoem-06-2020-0705",
+    "tier": 3
   },
   {
     "title": "Digital start-up access to venture capital financing: What signals quality?",
@@ -5604,7 +5729,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.ememar.2020.100743"
+    "_key": "doi:10.1016/j.ememar.2020.100743",
+    "tier": 3
   },
   {
     "title": "The internationalization of African fintech firms: marketing strategies for successful intra-Africa expansion",
@@ -5647,7 +5773,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1108/imr-05-2019-0130"
+    "_key": "doi:10.1108/imr-05-2019-0130",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial finance and new venture success ‐ the moderating role of government support",
@@ -5695,7 +5822,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1002/bsd2.105"
+    "_key": "doi:10.1002/bsd2.105",
+    "tier": 3
   },
   {
     "title": "New Venture Creation Entrepreneurship for the 21st Century",
@@ -5737,7 +5865,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "title:newventurecreationentrepreneurshipforthe21stcentury"
+    "_key": "title:newventurecreationentrepreneurshipforthe21stcentury",
+    "tier": 3
   },
   {
     "title": "Interplay of Human and Structural Capital Signals for New Technology Ventures in Early-Stage Venture Capital Funding",
@@ -5791,7 +5920,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.37725/mgmt.2026.10762"
+    "_key": "doi:10.37725/mgmt.2026.10762",
+    "tier": 3
   },
   {
     "title": "HYPERSCALING HOUSING: Venture Capital, Real Estate Start‐Ups and the Race to Build a Global Residential Brand",
@@ -5844,7 +5974,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/1468-2427.70046"
+    "_key": "doi:10.1111/1468-2427.70046",
+    "tier": 3
   },
   {
     "title": "Introduction to Entrepreneurial Finance",
@@ -5891,7 +6022,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1017/9781009537827.002"
+    "_key": "doi:10.1017/9781009537827.002",
+    "tier": 3
   },
   {
     "title": "Reframing the ideal investor through entrepreneurial experience",
@@ -5944,7 +6076,8 @@
       "method": "회귀분석",
       "caveats": "자기응답·표본 편의 가능, 자기응답 편의 가능, 횡단면: 상관≠인과"
     },
-    "_key": "doi:10.1108/md-08-2024-1957"
+    "_key": "doi:10.1108/md-08-2024-1957",
+    "tier": 3
   },
   {
     "title": "India’s Innovation Ecosystem: An Analysis of Startup Funding, Deeptech Growth, and Women-Led Capital Formation",
@@ -5995,7 +6128,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.66710/ijersem.v2si1.41"
+    "_key": "doi:10.66710/ijersem.v2si1.41",
+    "tier": 3
   },
   {
     "title": "On the asymmetric effects of stock market valuation and macroeconomic environment on venture capital and private equity",
@@ -6043,7 +6177,8 @@
       "method": "패널분석, 회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.1108/emjb-05-2024-0124"
+    "_key": "doi:10.1108/emjb-05-2024-0124",
+    "tier": 3
   },
   {
     "title": "Optimizing college entrepreneurial finance allocation",
@@ -6077,7 +6212,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.frl.2025.107048"
+    "_key": "doi:10.1016/j.frl.2025.107048",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Project Financing: Challengers and Opportunities for Economic Growth",
@@ -6112,7 +6248,8 @@
       "method": "패널분석",
       "caveats": ""
     },
-    "_key": "doi:10.61093/sec.9(1).233-251.2025"
+    "_key": "doi:10.61093/sec.9(1).233-251.2025",
+    "tier": 3
   },
   {
     "title": "EVALUATING INNOVATION IN EQUITY INVESTMENT DECISIONS: INSIGHTS FROM VENTURE CAPITAL, PRIVATE EQUITY AND EQUITY FUND PERSPECTIVES",
@@ -6164,7 +6301,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1142/s1363919625400146"
+    "_key": "doi:10.1142/s1363919625400146",
+    "tier": 3
   },
   {
     "title": "The Signaling Value of Technology Venture Acquisitions",
@@ -6223,7 +6361,8 @@
       "method": "이중차분(DiD)",
       "caveats": "DiD: 평행추세 가정 검토"
     },
-    "_key": "doi:10.5465/amproc.2025.15069abstract"
+    "_key": "doi:10.5465/amproc.2025.15069abstract",
+    "tier": 3
   },
   {
     "title": "Bridging Entrepreneurial Intention and Action: How Financing Models Shape the Growth of Innovative SMEs in Widening Countries",
@@ -6280,7 +6419,8 @@
       "method": "",
       "caveats": "자기응답·표본 편의 가능, 상관≠인과 주의"
     },
-    "_key": "doi:10.3390/admsci15110419"
+    "_key": "doi:10.3390/admsci15110419",
+    "tier": 3
   },
   {
     "title": "Is having immigrants in entrepreneurial teams good for equity crowdfunding success and long-term venture survival?",
@@ -6322,7 +6462,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/02662426251325119"
+    "_key": "doi:10.1177/02662426251325119",
+    "tier": 3
   },
   {
     "title": "The role of entrepreneurs’ attributes in early-stage investment decisions",
@@ -6362,7 +6503,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/14657503251317631"
+    "_key": "doi:10.1177/14657503251317631",
+    "tier": 3
   },
   {
     "title": "Public support and <scp>VC</scp> financing in academic startups",
@@ -6418,7 +6560,8 @@
       "method": "패널분석",
       "caveats": ""
     },
-    "_key": "doi:10.1002/sej.70003"
+    "_key": "doi:10.1002/sej.70003",
+    "tier": 3
   },
   {
     "title": "The role of media memorability in facilitating startups’ access to venture capital funding",
@@ -6452,7 +6595,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbusres.2025.115627"
+    "_key": "doi:10.1016/j.jbusres.2025.115627",
+    "tier": 3
   },
   {
     "title": "Shifting global drug discovery landscape and the critical role of startups in strengthening national capabilities",
@@ -6495,7 +6639,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.drudis.2025.104576"
+    "_key": "doi:10.1016/j.drudis.2025.104576",
+    "tier": 3
   },
   {
     "title": "Common Venture Capital Investors and Startup Growth",
@@ -6546,7 +6691,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1093/rfs/hhad071"
+    "_key": "doi:10.1093/rfs/hhad071",
+    "tier": 3
   },
   {
     "title": "Blockchain-based entrepreneurial finance: success determinants of tourism initial coin offerings",
@@ -6591,7 +6737,8 @@
       "method": "회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.1080/13683500.2021.1980505"
+    "_key": "doi:10.1080/13683500.2021.1980505",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance in the Twenty-first Century, a Review of Factors Influencing Venture Capitalist’s Decision",
@@ -6642,7 +6789,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1177/09713557211025654"
+    "_key": "doi:10.1177/09713557211025654",
+    "tier": 3
   },
   {
     "title": "Fostering digital entrepreneurship from startup to scaleup: The role of venture capital funds and angel groups",
@@ -6692,7 +6840,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.techfore.2019.04.022"
+    "_key": "doi:10.1016/j.techfore.2019.04.022",
+    "tier": 3
   },
   {
     "title": "Expand innovation finance via crowdfunding",
@@ -6733,7 +6882,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1126/science.aaf6989"
+    "_key": "doi:10.1126/science.aaf6989",
+    "tier": 3
   },
   {
     "title": "Issues In Venture Capital",
@@ -6783,7 +6933,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5281/zenodo.19771268"
+    "_key": "doi:10.5281/zenodo.19771268",
+    "tier": 3
   },
   {
     "title": "Issues In Venture Capital",
@@ -6833,7 +6984,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5281/zenodo.19771269"
+    "_key": "doi:10.5281/zenodo.19771269",
+    "tier": 3
   },
   {
     "title": "Issues in Venture Capital",
@@ -6883,7 +7035,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6648698"
+    "_key": "doi:10.2139/ssrn.6648698",
+    "tier": 3
   },
   {
     "title": "Power-Law Distribution in Venture Capital Returns and Its Implications for Venture Capital Portfolio Construction",
@@ -6937,7 +7090,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5281/zenodo.19054360"
+    "_key": "doi:10.5281/zenodo.19054360",
+    "tier": 3
   },
   {
     "title": "Power-Law Distribution in Venture Capital Returns and Its Implications for Venture Capital Portfolio Construction",
@@ -6991,7 +7145,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5281/zenodo.19054361"
+    "_key": "doi:10.5281/zenodo.19054361",
+    "tier": 3
   },
   {
     "title": "Talent Flows in Venture Capital Networks",
@@ -7041,7 +7196,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6703018"
+    "_key": "doi:10.2139/ssrn.6703018",
+    "tier": 3
   },
   {
     "title": "Talent Flows in Venture Capital Networks",
@@ -7091,7 +7247,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6702978"
+    "_key": "doi:10.2139/ssrn.6702978",
+    "tier": 3
   },
   {
     "title": "Black Entrepreneurs, Groupthink, and Venture Capital Funding",
@@ -7138,7 +7295,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6253808"
+    "_key": "doi:10.2139/ssrn.6253808",
+    "tier": 3
   },
   {
     "title": "Essays on Strategy, Startups, and Venture Capital",
@@ -7182,7 +7340,8 @@
       "method": "이중차분(DiD)",
       "caveats": "DiD: 평행추세 가정 검토"
     },
-    "_key": "title:essaysonstrategystartupsandventurecapital"
+    "_key": "title:essaysonstrategystartupsandventurecapital",
+    "tier": 3
   },
   {
     "title": "Venture Capital Term Sheet",
@@ -7237,7 +7396,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1017/9781009537827.024"
+    "_key": "doi:10.1017/9781009537827.024",
+    "tier": 3
   },
   {
     "title": "Venture Capital and Private Equity",
@@ -7293,7 +7453,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1017/9781009537827.006"
+    "_key": "doi:10.1017/9781009537827.006",
+    "tier": 3
   },
   {
     "title": "Investing in the future: Evaluating technology ventures on sustainability impact in venture capital",
@@ -7335,7 +7496,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.technovation.2026.103536"
+    "_key": "doi:10.1016/j.technovation.2026.103536",
+    "tier": 3
   },
   {
     "title": "Regulatory Firm Boundaries and Corporate Venture Capital Investments",
@@ -7388,7 +7550,8 @@
       "method": "패널분석, 회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.6082/64qb8-fnh43"
+    "_key": "doi:10.6082/64qb8-fnh43",
+    "tier": 3
   },
   {
     "title": "Venture Capital Practices in Saudi Arabia: The Views of Investors",
@@ -7448,7 +7611,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1002/tie.70088"
+    "_key": "doi:10.1002/tie.70088",
+    "tier": 3
   },
   {
     "title": "Regulatory Firm Boundaries and Corporate Venture Capital Investments",
@@ -7501,7 +7665,8 @@
       "method": "패널분석, 회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.6082/uchicago.16982"
+    "_key": "doi:10.6082/uchicago.16982",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance",
@@ -7547,7 +7712,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1017/9781009537827"
+    "_key": "doi:10.1017/9781009537827",
+    "tier": 3
   },
   {
     "title": "Introduction to Field Guide to Entrepreneurial Finance",
@@ -7586,7 +7752,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.4337/9781035342501.00005"
+    "_key": "doi:10.4337/9781035342501.00005",
+    "tier": 3
   },
   {
     "title": "Essays in entrepreneurial finance and innovation",
@@ -7641,7 +7808,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.17918/00011431"
+    "_key": "doi:10.17918/00011431",
+    "tier": 3
   },
   {
     "title": "Strategies for Optimizing Entrepreneurial Financing Channels for College Students",
@@ -7693,7 +7861,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.54254/2754-1169/2026.ld31469"
+    "_key": "doi:10.54254/2754-1169/2026.ld31469",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance: From Startup to Scale-up - A European perspective",
@@ -7748,7 +7917,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6420958"
+    "_key": "doi:10.2139/ssrn.6420958",
+    "tier": 3
   },
   {
     "title": "Exploring the Signaling Effect of B Corp Certification in Entrepreneurial Finance",
@@ -7794,7 +7964,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6428898"
+    "_key": "doi:10.2139/ssrn.6428898",
+    "tier": 3
   },
   {
     "title": "Exploring Entrepreneurial Financing Strategies in Early-Stage Ventures: Insights from Entrepreneurs in Perlis, Malaysia",
@@ -7842,7 +8013,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.17687/jeb.v14i1.1729"
+    "_key": "doi:10.17687/jeb.v14i1.1729",
+    "tier": 3
   },
   {
     "title": "Impact of crowdfunding, entrepreneurial finance and varieties of entrepreneurial ecosystems after COVID pandemic for rural women",
@@ -7896,7 +8068,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1371/journal.pone.0340966"
+    "_key": "doi:10.1371/journal.pone.0340966",
+    "tier": 3
   },
   {
     "title": "Access to Entrepreneurial Finance and Business Performance: An Empirical Study of Selected Women-Led Start-Ups",
@@ -7953,7 +8126,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/978-3-031-98141-8_15"
+    "_key": "doi:10.1007/978-3-031-98141-8_15",
+    "tier": 3
   },
   {
     "title": "Can Government Venture Capital Fix Early-Stage Finance Gaps?",
@@ -7994,7 +8168,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.64240/e3961971dc"
+    "_key": "doi:10.64240/e3961971dc",
+    "tier": 3
   },
   {
     "title": "Artificial Intelligence Complements Open-Source Knowledge in Startup Growth",
@@ -8044,7 +8219,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6347480"
+    "_key": "doi:10.2139/ssrn.6347480",
+    "tier": 3
   },
   {
     "title": "Space for Growth: Startups on the Final Frontier",
@@ -8104,7 +8280,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.6519958"
+    "_key": "doi:10.2139/ssrn.6519958",
+    "tier": 3
   },
   {
     "title": "Venture Capital Netzwerke in Europe -",
@@ -8152,7 +8329,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "title:venturecapitalnetzwerkeineurope"
+    "_key": "title:venturecapitalnetzwerkeineurope",
+    "tier": 3
   },
   {
     "title": "The problems of venture capital financing of SMEs in Tunisia",
@@ -8200,7 +8378,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.55927/eajmr.v4i12.520"
+    "_key": "doi:10.55927/eajmr.v4i12.520",
+    "tier": 3
   },
   {
     "title": "Navigating a Down Round in Venture Capital: GoStage Ventures (SPANISH)",
@@ -8250,7 +8429,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.5759611"
+    "_key": "doi:10.2139/ssrn.5759611",
+    "tier": 3
   },
   {
     "title": "STATE-BACKED VENTURE CAPITAL AND TECHNOLOGY CLUSTERS IN EUROPE",
@@ -8303,7 +8483,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.32752/1993-6788-2025-1-289-53-64"
+    "_key": "doi:10.32752/1993-6788-2025-1-289-53-64",
+    "tier": 3
   },
   {
     "title": "Venture Capital Research: Review and Interdisciplinary Agenda",
@@ -8352,7 +8533,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5465/amproc.2025.14448abstract"
+    "_key": "doi:10.5465/amproc.2025.14448abstract",
+    "tier": 3
   },
   {
     "title": "Networks of Entrepreneurial Finance",
@@ -8405,7 +8587,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.5465/amproc.2025.15679poster"
+    "_key": "doi:10.5465/amproc.2025.15679poster",
+    "tier": 3
   },
   {
     "title": "New Trends in Entrepreneurial Finance Research",
@@ -8457,7 +8640,8 @@
       "method": "패널분석",
       "caveats": ""
     },
-    "_key": "doi:10.5465/amproc.2025.10096symposium"
+    "_key": "doi:10.5465/amproc.2025.10096symposium",
+    "tier": 3
   },
   {
     "title": "SMEs entrepreneurial finance-based digital transformation: towards innovative entrepreneurial finance and entrepreneurial performance",
@@ -8502,7 +8686,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1080/13691066.2023.2195127"
+    "_key": "doi:10.1080/13691066.2023.2195127",
+    "tier": 3
   },
   {
     "title": "Financing sustainable entrepreneurship: ESG measurement, valuation, and performance",
@@ -8539,7 +8724,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbusvent.2022.106258"
+    "_key": "doi:10.1016/j.jbusvent.2022.106258",
+    "tier": 3
   },
   {
     "title": "The structure and governance of venture-capital organizations",
@@ -8570,7 +8756,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.4324/9781315235110-2"
+    "_key": "doi:10.4324/9781315235110-2",
+    "tier": 3
   },
   {
     "title": "Does blockchain technology democratize entrepreneurial finance? An empirical comparison of ICOs, venture capital, and REITs",
@@ -8619,7 +8806,8 @@
       "method": "",
       "caveats": "상관≠인과 주의"
     },
-    "_key": "doi:10.4324/9781003334675-6"
+    "_key": "doi:10.4324/9781003334675-6",
+    "tier": 3
   },
   {
     "title": "Entrepreneurial Finance in Emerging Markets",
@@ -8656,7 +8844,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1007/978-3-030-46220-8"
+    "_key": "doi:10.1007/978-3-030-46220-8",
+    "tier": 3
   },
   {
     "title": "A study of startup accelerators in Silicon Valley and some implications for Nigeria",
@@ -8707,7 +8896,8 @@
       "method": "회귀분석",
       "caveats": ""
     },
-    "_key": "doi:10.1080/20421338.2020.1746045"
+    "_key": "doi:10.1080/20421338.2020.1746045",
+    "tier": 3
   },
   {
     "title": "Does Blockchain Technology Democratize Entrepreneurial Finance? An Empirical Comparison of ICOs, Venture Capital, and REITs",
@@ -8748,7 +8938,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.3693802"
+    "_key": "doi:10.2139/ssrn.3693802",
+    "tier": 3
   },
   {
     "title": "New directions in entrepreneurial finance",
@@ -8789,7 +8980,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1016/j.jbankfin.2019.02.008"
+    "_key": "doi:10.1016/j.jbankfin.2019.02.008",
+    "tier": 3
   },
   {
     "title": "Initial Coin Offerings: Financing Growth with Cryptocurrency Token Sales",
@@ -8824,7 +9016,8 @@
       "method": "도구변수(IV)",
       "caveats": "도구변수: 배제제약·약한도구 검토, 예측≠인과 주의"
     },
-    "_key": "doi:10.3386/w24774"
+    "_key": "doi:10.3386/w24774",
+    "tier": 3
   },
   {
     "title": "The Problems with and Promise of Entrepreneurial Finance",
@@ -8868,7 +9061,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1002/sej.1265"
+    "_key": "doi:10.1002/sej.1265",
+    "tier": 3
   },
   {
     "title": "Swept Away by the Crowd? Crowdfunding, Venture Capital, and the Selection of Entrepreneurs",
@@ -8912,7 +9106,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.2139/ssrn.2239204"
+    "_key": "doi:10.2139/ssrn.2239204",
+    "tier": 3
   },
   {
     "title": "Optimal Investment, Monitoring, and the Staging of Venture Capital",
@@ -8958,7 +9153,8 @@
       "method": "",
       "caveats": "예측≠인과 주의"
     },
-    "_key": "doi:10.1111/j.1540-6261.1995.tb05185.x"
+    "_key": "doi:10.1111/j.1540-6261.1995.tb05185.x",
+    "tier": "F"
   },
   {
     "title": "Whom You Know Matters: Venture Capital Networks and Investment Performance",
@@ -9003,7 +9199,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/j.1540-6261.2007.01207.x"
+    "_key": "doi:10.1111/j.1540-6261.2007.01207.x",
+    "tier": "F"
   },
   {
     "title": "How Smart Is Smart Money? A Two‐Sided Matching Model of Venture Capital",
@@ -9045,7 +9242,8 @@
       "method": "매칭",
       "caveats": ""
     },
-    "_key": "doi:10.1111/j.1540-6261.2007.01291.x"
+    "_key": "doi:10.1111/j.1540-6261.2007.01291.x",
+    "tier": "F"
   },
   {
     "title": "Venture Capital and the Professionalization of Start‐Up Firms: Empirical Evidence",
@@ -9089,7 +9287,8 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/1540-6261.00419"
+    "_key": "doi:10.1111/1540-6261.00419",
+    "tier": "F"
   },
   {
     "title": "Financial Contracting Theory Meets the Real World: An Empirical Analysis of Venture Capital Contracts",
@@ -9129,6 +9328,7 @@
       "method": "",
       "caveats": ""
     },
-    "_key": "doi:10.1111/1467-937x.00245"
+    "_key": "doi:10.1111/1467-937x.00245",
+    "tier": "F"
   }
 ]
