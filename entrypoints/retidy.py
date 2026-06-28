@@ -34,10 +34,12 @@ def main():
     for e in entries:               # 새 형식으로 재요약
         e.summary = summarize(e.scored)
 
-    kept = [e for e in entries if e.scored.relevance >= threshold or e.scored.is_canon]
-    kept.sort(key=lambda e: (e.scored.relevance, e.paper.cited_by), reverse=True)
-    kept = kept[:cap]
-    print(f"유지 대상: {len(kept)}편 (임계값 {threshold}, 상한 {cap})")
+    # canon(고전)은 항상 보존, 나머지는 관련도 상위로 cap까지 채움
+    canon = [e for e in entries if e.scored.is_canon]
+    qualified = [e for e in entries if e.scored.relevance >= threshold and not e.scored.is_canon]
+    qualified.sort(key=lambda e: (e.scored.relevance, e.paper.cited_by), reverse=True)
+    kept = canon + qualified[:max(0, cap - len(canon))]
+    print(f"유지 대상: {len(kept)}편 (임계값 {threshold}, 상한 {cap}, canon {len(canon)})")
 
     # data.json + HTML 재작성 (기존 store는 버리고 kept로 교체)
     new_store = html_site.merge([], kept)
@@ -59,7 +61,13 @@ def main():
             batch = zot.collection_items_top(coll, limit=50)
             if not batch:
                 break
-            zot.delete_item(batch)
+            try:
+                zot.delete_item(batch, last_modified=zot.last_modified_version())
+            except Exception:  # noqa: BLE001  버전 경쟁 시 1회 재시도
+                batch = zot.collection_items_top(coll, limit=50)
+                if not batch:
+                    break
+                zot.delete_item(batch, last_modified=zot.last_modified_version())
             removed += len(batch)
         print(f"  삭제 완료: {removed}편")
         n = zotero.push(kept)
