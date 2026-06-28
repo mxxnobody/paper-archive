@@ -12,9 +12,9 @@ def make_entry(title="Staged Financing", doi="10.1/a", rel=85):
               venue="Journal of Finance", abstract="We study staging.",
               url=f"https://doi.org/{doi}", concepts=["Venture capital"], cited_by=10)
     s = ScoredPaper(paper=p, relevance=rel, reason="후속투자와 직결")
-    summ = KoreanSummary(summary="단계적 투자를 분석한다.", dependent_var="후속투자",
-                         independent_var="market traction", method="패널 회귀",
-                         korea_implication="한국 VC에 적용 가능")
+    summ = KoreanSummary(summary="단계적 투자를 분석한다.", key_result="We find staging matters.",
+                         dependent_var="후속투자", independent_var="market traction",
+                         method="패널 회귀", caveats="DiD: 평행추세 가정 검토")
     return Entry(scored=s, summary=summ)
 
 

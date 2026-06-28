@@ -65,7 +65,9 @@ ranking:
   core_weight: 2           # 핵심 키워드 1개당 가중치(일반은 1)
   min_weight: 2            # prefilter 채택 기준(가중합). 핵심 1개=2 → 통과, 일반 1개=1 → 제외
   saturate_weight: 5       # 가중합이 이 값이면 관련도 기본점 100 도달
-  keyword_top_n: 800       # prefilter 상위 컷(넓은 시작판). 넉넉히 잡아 누락 방지
-  relevance_threshold: 45  # 0~100. 이 점수 이상만 전달 (canon은 무조건 통과)
-  weekly_highlight_n: 8    # 텔레그램 주간 알림에 실을 상위 논문 수
+  keyword_top_n: 800       # prefilter 상위 컷. 넉넉히 잡아 누락 방지
+  relevance_threshold: 80  # 0~100. 엄격 — 이 점수 이상만 전달 (canon은 무조건 통과)
+  weekly_max: 20           # 주간 1회 전달 상한(알림·Zotero·아카이브 공통). 초과분은 다음 주 이월
+  weekly_highlight_n: 10   # 텔레그램 주간 알림에 요약 실을 상위 논문 수(평균 ~10)
+  retidy_max: 200          # 기존 재정비 시 유지할 최대 편수(읽기 캐파)
   per_keyword_fetch: 400   # 키워드별 OpenAlex 수집량

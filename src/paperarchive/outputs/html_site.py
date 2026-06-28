@@ -69,6 +69,8 @@ _TEMPLATE = Template(r"""<!DOCTYPE html>
   .canon { background:#432; color:#fc9; }
   .kv { margin:4px 0; }
   .kv b { color:var(--acc); }
+  .caveat { color:#f4b860; }
+  .caveat b { color:#f4b860; }
   .en { display:none; color:var(--mut); font-size:14px; border-left:2px solid var(--line); padding-left:10px; margin-top:8px; }
   body.show-en .en { display:block; }
   a { color:var(--acc); text-decoration:none; }
@@ -134,10 +136,11 @@ function render(){
       <h2>${esc(d.title)} ${d.is_canon?'<span class="badge canon">canon</span>':''}<span class="badge">관련도 ${d.relevance||0}</span></h2>
       <div class="row">${esc(d.venue||'NA')} (${d.year||'NA'}) · ${esc(authors)} · 인용 ${d.cited_by||0}${d.doi?` · <a href="${esc(d.url)}" target="_blank">DOI</a>`:''}</div>
       ${su.summary?`<div class="kv">${esc(su.summary)}</div>`:''}
+      ${su.key_result?`<div class="kv"><b>핵심 결과</b> ${esc(su.key_result)}</div>`:''}
       ${su.dependent_var?`<div class="kv"><b>종속변수</b> ${esc(su.dependent_var)}</div>`:''}
       ${su.independent_var?`<div class="kv"><b>독립변수</b> ${esc(su.independent_var)}</div>`:''}
       ${su.method?`<div class="kv"><b>방법</b> ${esc(su.method)}</div>`:''}
-      ${su.korea_implication?`<div class="kv"><b>한국 적용</b> ${esc(su.korea_implication)}</div>`:''}
+      ${su.caveats?`<div class="kv caveat"><b>⚠️ 유의점</b> ${esc(su.caveats)}</div>`:''}
       ${d.reason?`<div class="kv" style="color:var(--mut)"><b>선정 이유</b> ${esc(d.reason)}</div>`:''}
       ${d.abstract?`<div class="en"><b>Abstract.</b> ${esc(d.abstract)}</div>`:''}
     </div>`;

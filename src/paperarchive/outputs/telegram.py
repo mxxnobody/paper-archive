@@ -32,11 +32,14 @@ def build_message(entries: list[Entry], highlight_n: int, site_url: str | None) 
         p = e.paper
         title = _esc(p.title)
         link = p.url or ""
+        su = e.summary
         block = (
             f"\n<b>{i}. {title}</b>\n"
             f"<i>{_esc(p.venue or 'NA')} ({p.year or 'NA'}) · 관련도 {e.scored.relevance}</i>\n"
-            f"{_esc(e.summary.summary)}\n"
+            f"{_esc(su.summary)}\n"
         )
+        if su.caveats:
+            block += f"⚠️ {_esc(su.caveats)}\n"
         if link:
             block += f'🔗 <a href="{_esc(link)}">원문</a>\n'
         parts.append(block)

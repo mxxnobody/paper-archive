@@ -1,11 +1,14 @@
-"""요약 생성 (LLM 미사용) — abstract/TLDR + 키워드 기반 DV/IV/방법 태깅.
+"""요약 생성 (LLM 미사용) — 간략 추출 + 비판적 읽기 보조.
 
-LLM 없이 동작하도록 원문 abstract와 Semantic Scholar TLDR를 그대로 쓰고,
-연구자 도메인에 맞춘 용어 사전으로 종속/독립변수·방법을 휴리스틱 추출한다.
-요약 본문은 영어(원문 기반), 라벨은 한국어.
+LLM 없이 가능한 정직한 범위:
+- summary: TLDR 우선, 없으면 결과/주장 문장 추출(없으면 첫 문장)
+- key_result: "we find/show/..." 등 결과 단서 문장 추출
+- dependent_var/independent_var/method: 키워드 사전 탐지
+- caveats: 탐지된 방법에 대응하는 *일반* 점검 항목(논문별 실제 비평 아님)
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 from .rank import ScoredPaper
@@ -35,14 +38,43 @@ _METHOD_TERMS = {
     "regression": "회귀분석",
 }
 
+# 방법/표본 단서 → 일반 유의점 (규칙 기반, 비판적 읽기 보조)
+_CAVEAT_RULES = {
+    "difference-in-differences": "DiD: 평행추세 가정 검토",
+    "diff-in-diff": "DiD: 평행추세 가정 검토",
+    "instrumental variable": "도구변수: 배제제약·약한도구 검토",
+    "regression discontinuity": "RDD: 대역폭·경계조작 민감도",
+    "machine learning": "예측≠인과 주의",
+    "prediction": "예측≠인과 주의",
+    "predict": "예측≠인과 주의",
+    "random forest": "예측≠인과 주의",
+    "neural": "예측≠인과 주의",
+    "survey": "자기응답·표본 편의 가능",
+    "self-reported": "자기응답 편의 가능",
+    "questionnaire": "자기응답·표본 편의 가능",
+    "propensity score": "매칭: 관측가능 변수에 한정",
+    "cross-sectional": "횡단면: 상관≠인과",
+    "correlation": "상관≠인과 주의",
+}
+
+_RESULT_CUES = [
+    "we find", "we show", "we document", "we provide evidence", "we demonstrate",
+    "we estimate", "results show", "results suggest", "results indicate",
+    "find that", "show that", "evidence that", "our findings", "findings suggest",
+]
+
+KNOWN_FIELDS = {"summary", "key_result", "dependent_var", "independent_var",
+                "method", "caveats"}
+
 
 @dataclass
 class KoreanSummary:
-    summary: str = ""             # 원문 기반 요약(TLDR 우선, 없으면 abstract)
-    dependent_var: str = ""       # 키워드로 탐지된 종속변수 후보
-    independent_var: str = ""     # 키워드로 탐지된 독립변수 후보(traction 강조)
-    method: str = ""              # 탐지된 방법론
-    korea_implication: str = ""   # LLM 미사용 시 비움
+    summary: str = ""              # 1~2문장 간략 (원문 기반)
+    key_result: str = ""          # 결과/주장 문장 추출(영문)
+    dependent_var: str = ""       # 종속변수 후보(키워드)
+    independent_var: str = ""     # 독립변수 후보(키워드)
+    method: str = ""              # 방법론(키워드)
+    caveats: str = ""             # 방법론 유의점(규칙 기반, 일반)
 
 
 def _detect(text: str, terms: dict[str, str]) -> str:
@@ -53,22 +85,41 @@ def _detect(text: str, terms: dict[str, str]) -> str:
     return ", ".join(found)
 
 
+def _sentences(text: str) -> list[str]:
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text or "") if s.strip()]
+
+
+def _extract_result(abstract: str) -> str:
+    """결과 단서가 포함된 첫 문장을 추출(없으면 빈값)."""
+    for sent in _sentences(abstract):
+        low = sent.lower()
+        if any(cue in low for cue in _RESULT_CUES):
+            return sent[:300]
+    return ""
+
+
 def summarize(s: ScoredPaper, profile: dict | None = None) -> KoreanSummary:
     p = s.paper
     tldr = p.extra.get("tldr")
     abstract = p.abstract or ""
+    key_result = _extract_result(abstract)
+
     if tldr:
         body = tldr
+    elif key_result:
+        body = key_result
     elif abstract:
-        body = abstract[:600] + ("…" if len(abstract) > 600 else "")
+        sents = _sentences(abstract)
+        body = " ".join(sents[:2])[:300] + ("…" if len(abstract) > 300 else "")
     else:
         body = "(초록 없음 — DOI 링크에서 확인)"
 
     text = f" {(p.title or '').lower()} {abstract.lower()} {(tldr or '').lower()} "
     return KoreanSummary(
         summary=body,
+        key_result=key_result,
         dependent_var=_detect(text, _DV_TERMS),
         independent_var=_detect(text, _IV_TERMS),
         method=_detect(text, _METHOD_TERMS),
-        korea_implication="",
+        caveats=_detect(text, _CAVEAT_RULES),
     )

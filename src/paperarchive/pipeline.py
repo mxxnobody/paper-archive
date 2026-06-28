@@ -21,6 +21,16 @@ def _mailto() -> str | None:
     return os.environ.get("OPENALEX_MAILTO")
 
 
+def weekly_selection(entries, processed, weekly_max):
+    """주간 드립 — 상위 weekly_max만 전달, 밀린 임계값이상은 seen 미기록(다음주 재경합).
+
+    (delivered, seen_add) 반환. seen_add = 전체 후보 - 이월(상한 초과 entries).
+    """
+    delivered = entries[:weekly_max]
+    carried = {e.paper.key() for e in entries[weekly_max:]}
+    return delivered, processed - carried
+
+
 def run(
     profile: dict,
     *,

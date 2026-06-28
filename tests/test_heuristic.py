@@ -32,7 +32,7 @@ def test_assign_relevance_single_core_below_max():
 
 def test_summarize_detects_vars_and_method():
     p = Paper(title="Staging and follow-on rounds",
-              abstract="We study follow-on investment and market traction using regression.")
+              abstract="This paper examines follow-on investment and market traction using regression.")
     summ = summarize(ScoredPaper(paper=p), PROFILE)
     assert "후속투자" in summ.dependent_var
     assert "market traction" in summ.independent_var
@@ -44,3 +44,16 @@ def test_summarize_prefers_tldr():
     p = Paper(title="X", abstract="long abstract", extra={"tldr": "short tldr"})
     summ = summarize(ScoredPaper(paper=p), PROFILE)
     assert summ.summary == "short tldr"
+
+
+def test_summarize_extracts_key_result():
+    p = Paper(title="X", abstract="We study VC staging. We find that follow-on funding rises with traction.")
+    summ = summarize(ScoredPaper(paper=p), PROFILE)
+    assert summ.key_result.startswith("We find that")
+
+
+def test_summarize_caveats_from_method():
+    p = Paper(title="X", abstract="Using a difference-in-differences design with machine learning.")
+    summ = summarize(ScoredPaper(paper=p), PROFILE)
+    assert "DiD" in summ.caveats
+    assert "예측≠인과" in summ.caveats

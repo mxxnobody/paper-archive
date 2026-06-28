@@ -29,7 +29,9 @@ class Entry:
         )
         s = ScoredPaper(paper=p, relevance=d.get("relevance", 0),
                         reason=d.get("reason", ""), is_canon=d.get("is_canon", False))
-        summ = KoreanSummary(**d.get("summary", {}))
+        from .summarize import KNOWN_FIELDS
+        raw = {k: v for k, v in (d.get("summary") or {}).items() if k in KNOWN_FIELDS}
+        summ = KoreanSummary(**raw)
         return Entry(scored=s, summary=summ)
 
     def to_dict(self) -> dict:

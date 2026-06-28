@@ -1,7 +1,8 @@
-"""Zotero Web API 푸시 — read/write API 키로 지정 컬렉션에 항목 추가.
+"""Zotero Web API 푸시 — read/write API 키로 지정 컬렉션에 항목 + 자식 노트 적재.
 
+요약·비평은 부모 item의 extra가 아니라 **child note(자식 노트)**로 넣는다.
 환경변수: ZOTERO_API_KEY, ZOTERO_USER_ID, ZOTERO_COLLECTION_KEY
-이미 있는 DOI는 건너뛴다(중복 방지). 미설정 시 조용히 건너뜀(로컬 실행 편의).
+미설정 시 조용히 건너뜀(로컬 실행 편의).
 """
 from __future__ import annotations
 
@@ -12,13 +13,31 @@ from ..record import Entry
 
 log = logging.getLogger(__name__)
 
+NOTE_TAG = "auto-summary"   # 재실행 시 자식 노트 갱신 식별용
+
+
+def get_zotero():
+    """(zot, collection_key) 반환. 미설정/미설치면 (None, None)."""
+    api_key = os.environ.get("ZOTERO_API_KEY")
+    user_id = os.environ.get("ZOTERO_USER_ID")
+    collection_key = os.environ.get("ZOTERO_COLLECTION_KEY") or None
+    if not (api_key and user_id):
+        log.info("Zotero 미설정 — 건너뜀.")
+        return None, None
+    try:
+        from pyzotero import zotero
+    except ImportError:
+        log.warning("pyzotero 미설치 — 건너뜀.")
+        return None, None
+    return zotero.Zotero(user_id, "user", api_key), collection_key
+
 
 def _existing_dois(zot, collection_key: str | None) -> set[str]:
-    """라이브러리(또는 컬렉션)의 기존 DOI 집합 — 중복 푸시 방지."""
     dois: set[str] = set()
     try:
         items = (
-            zot.collection_items_top(collection_key) if collection_key else zot.top()
+            zot.everything(zot.collection_items_top(collection_key))
+            if collection_key else zot.everything(zot.top())
         )
         for it in items:
             doi = (it.get("data", {}).get("DOI") or "").lower()
@@ -29,62 +48,92 @@ def _existing_dois(zot, collection_key: str | None) -> set[str]:
     return dois
 
 
-def _to_zotero_item(zot, e: Entry, collection_key: str | None) -> dict:
+def _parent_item(zot, e: Entry, collection_key: str | None) -> dict:
     p = e.paper
-    template = zot.item_template("journalArticle")
-    template["title"] = p.title
-    template["creators"] = [
-        {"creatorType": "author", "name": a} for a in p.authors
-    ] or [{"creatorType": "author", "name": ""}]
-    template["publicationTitle"] = p.venue or ""
-    template["date"] = str(p.year or "")
-    template["DOI"] = p.doi or ""
-    template["url"] = p.url or ""
-    template["abstractNote"] = p.abstract or ""
-    # 태그: 관련 concept + canon 표시
+    t = zot.item_template("journalArticle")
+    t["title"] = p.title
+    t["creators"] = [{"creatorType": "author", "name": a} for a in p.authors] \
+        or [{"creatorType": "author", "name": ""}]
+    t["publicationTitle"] = p.venue or ""
+    t["date"] = str(p.year or "")
+    t["DOI"] = p.doi or ""
+    t["url"] = p.url or ""
+    t["abstractNote"] = p.abstract or ""
     tags = [{"tag": c} for c in p.concepts[:6]]
     if e.scored.is_canon:
         tags.append({"tag": "canon"})
     tags.append({"tag": f"relevance:{e.scored.relevance}"})
-    template["tags"] = tags
-    template["extra"] = f"한국어요약: {e.summary.summary}\n관련도근거: {e.scored.reason}"
+    t["tags"] = tags
+    t["extra"] = f"관련도 {e.scored.relevance}"
     if collection_key:
-        template["collections"] = [collection_key]
-    return template
+        t["collections"] = [collection_key]
+    return t
+
+
+def build_note_html(e: Entry) -> str:
+    su = e.summary
+    rows = [f"<p><b>요약</b>: {su.summary}</p>"]
+    if su.key_result:
+        rows.append(f"<p><b>핵심 결과</b>: {su.key_result}</p>")
+    if su.dependent_var:
+        rows.append(f"<p><b>종속변수</b>: {su.dependent_var}</p>")
+    if su.independent_var:
+        rows.append(f"<p><b>독립변수</b>: {su.independent_var}</p>")
+    if su.method:
+        rows.append(f"<p><b>방법</b>: {su.method}</p>")
+    if su.caveats:
+        rows.append(f"<p><b>⚠️ 유의점</b>: {su.caveats}</p>")
+    if e.scored.reason:
+        rows.append(f"<p><b>선정 이유</b>: {e.scored.reason}</p>")
+    return "".join(rows)
+
+
+def _note_item(zot, parent_key: str, e: Entry) -> dict:
+    n = zot.item_template("note")
+    n["parentItem"] = parent_key
+    n["note"] = build_note_html(e)
+    n["tags"] = [{"tag": NOTE_TAG}]
+    return n
+
+
+def _create_batched(zot, items: list[dict]) -> list[dict]:
+    """50개씩 생성, 성공한 item dict들을 제출 순서대로 반환."""
+    created: list[dict] = []
+    for i in range(0, len(items), 50):
+        chunk = items[i:i + 50]
+        resp = zot.create_items(chunk)
+        succ = resp.get("successful", {})
+        # 인덱스 순으로 정렬해 제출 순서와 매칭
+        for idx in sorted(succ, key=lambda k: int(k)):
+            created.append(succ[idx])
+    return created
 
 
 def push(entries: list[Entry]) -> int:
-    """엔트리를 Zotero에 추가. 추가된 항목 수 반환. 미설정/오류 시 0."""
-    api_key = os.environ.get("ZOTERO_API_KEY")
-    user_id = os.environ.get("ZOTERO_USER_ID")
-    collection_key = os.environ.get("ZOTERO_COLLECTION_KEY") or None
-    if not (api_key and user_id):
-        log.info("Zotero 미설정 — 푸시 건너뜀.")
+    """신규 entry를 부모 item + 자식 노트로 추가. 추가된 부모 수 반환."""
+    zot, collection_key = get_zotero()
+    if zot is None:
         return 0
-
-    try:
-        from pyzotero import zotero
-    except ImportError:
-        log.warning("pyzotero 미설치 — Zotero 푸시 건너뜀.")
-        return 0
-
-    zot = zotero.Zotero(user_id, "user", api_key)
     existing = _existing_dois(zot, collection_key)
 
-    items = []
+    new_entries, parents = [], []
     for e in entries:
         if e.paper.doi and e.paper.doi.lower() in existing:
             continue
-        items.append(_to_zotero_item(zot, e, collection_key))
-
-    if not items:
+        new_entries.append(e)
+        parents.append(_parent_item(zot, e, collection_key))
+    if not parents:
         log.info("Zotero: 추가할 신규 항목 없음.")
         return 0
 
-    created = 0
-    # Zotero create_items는 한 번에 최대 50개
-    for i in range(0, len(items), 50):
-        resp = zot.create_items(items[i:i + 50])
-        created += len(resp.get("successful", {}))
-    log.info("Zotero: %d개 항목 추가.", created)
-    return created
+    created = _create_batched(zot, parents)
+    # 부모 키와 entry 매칭(제출 순서 동일) → 자식 노트 생성
+    notes = []
+    for e, item in zip(new_entries, created):
+        key = item.get("key") or item.get("data", {}).get("key")
+        if key:
+            notes.append(_note_item(zot, key, e))
+    if notes:
+        _create_batched(zot, notes)
+    log.info("Zotero: 부모 %d개 + 노트 %d개 추가.", len(created), len(notes))
+    return len(created)
