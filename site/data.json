@@ -470,6 +470,72 @@
     "tier": 2
   },
   {
+    "title": "Artificial Intelligence As A Research Tool In Entrepreneurial Finance: Implications For SME Financing And Sustainable Development In Asian Financial Ecosystems",
+    "doi": "10.69980/1c00jw16",
+    "authors": [
+      "Rahul Patowary",
+      "Sarmistha Chatterjee",
+      "Farha Naaz",
+      "Ruchita Nandi",
+      "Aashtha Saikia",
+      "Pinamoni Taye"
+    ],
+    "year": 2026,
+    "venue": "DOAJ (DOAJ: Directory of Open Access Journals)",
+    "url": "https://doi.org/10.69980/1c00jw16",
+    "abstract": "Artificial intelligence (AI) is dramatically changing financial research by changing the way knowledge is created, interpreted and utilized in decision-making situations. Drawing on a systematic qualitative synthesis of current academic literature, the research shows that artificial intelligence-based methodologies and specifically machine learning and deep learning methods consistently surpass traditional econometric methods in high-dimensional financial applications such as asset pricing, credit risk assessment, fraud detection and investment analytics. Beyond improvements in predictions, the use of AI transforms the epistemic foundations of the financial world in ways such as the ability to find complex nonlinear patterns or the incorporation of data-driven analytics at the level of institutional infrastructures. These advancements have important implications for entrepreneurial ecosystems, given the role that AI-based financial systems play in improving the credit assessment of SMEs, mitigating information asymmetries in the financial evaluation of start-ups, and improving fintech-enabled financial inclusion, particularly in fast digitalising Asian markets. AI-driven financial research will help in enhancing efficiency in allocating capital and underpinning sustainability-oriented investment practices to innovate-led growth and long-term economic resilience in emerging economies in Asia. Artificial intelligence is therefore a new research paradigm that shapes more inclusive, innovation-driven and sustainable financial systems.",
+    "cited_by": 0,
+    "concepts": [
+      "Underpinning",
+      "Finance",
+      "Financial asset",
+      "Investment (military)",
+      "Asset (computer security)",
+      "Asset management",
+      "Sustainable development",
+      "Business",
+      "Economics",
+      "Financial market",
+      "Capital market",
+      "Resilience (materials science)",
+      "Financial engineering",
+      "Financial services",
+      "Financial risk",
+      "Emerging markets",
+      "Human capital",
+      "Financial innovation",
+      "Productivity",
+      "Analytics",
+      "Venture capital",
+      "Capital (architecture)",
+      "Artificial intelligence",
+      "Financial instrument",
+      "Psychological resilience",
+      "Corporate governance",
+      "Financial capital",
+      "Information asymmetry",
+      "Entrepreneurship",
+      "Capital asset",
+      "Big data",
+      "Financial management",
+      "Knowledge economy",
+      "Asset allocation"
+    ],
+    "relevance": 100,
+    "reason": "키워드 4개 일치 (Venture Capital, Entrepreneurial Finance, Corporate Governance, Machine Learning)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Artificial intelligence (AI) is dramatically changing financial research by changing the way knowledge is created, interpreted and utilized in decision-making situations. Drawing on a systematic qualitative synthesis of current academic literature, the research shows that artificial intelligence-bas…",
+      "key_result": "",
+      "dependent_var": "기업가치",
+      "independent_var": "성장, 머신러닝, 딥러닝",
+      "method": "머신러닝",
+      "caveats": "예측≠인과 주의"
+    },
+    "_key": "doi:10.69980/1c00jw16",
+    "tier": 2
+  },
+  {
     "title": "Gender differences in entrepreneurial equity financing—a systematic literature review",
     "doi": "10.1007/s11187-024-00989-x",
     "authors": [
@@ -1021,7 +1087,7 @@
       "caveats": ""
     },
     "_key": "doi:10.63680/ijsate0825021.35",
-    "tier": 2
+    "tier": 3
   },
   {
     "title": "Guest editorial: Digital entrepreneurial finance and new approaches to venture funding",

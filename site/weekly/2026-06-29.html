@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주간 2026-06-29 — Paper Archive</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1d24; --fg:#e7e9ee; --mut:#9aa3b2; --acc:#5b9dff; --line:#2a2e38; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif; }
+  header { padding:24px 20px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:5; }
+  h1 { margin:0 0 4px; font-size:20px; }
+  .meta { color:var(--mut); font-size:13px; }
+  .meta a { color:var(--acc); }
+  .controls { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+  input,select,button { background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:14px; }
+  input#q { flex:1; min-width:180px; }
+  main { padding:16px 20px 60px; max-width:980px; margin:0 auto; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
+  .card h2 { margin:0 0 6px; font-size:16px; }
+  .row { color:var(--mut); font-size:13px; margin-bottom:8px; }
+  .badge { display:inline-block; background:#243; color:#9f9; border-radius:6px; padding:1px 7px; font-size:12px; margin-left:6px; }
+  .canon { background:#432; color:#fc9; }
+  .t1 { background:#5a4500; color:#ffd87a; } .t2 { background:#1d3a5f; color:#9cc2ff; } .t3 { background:#2a2e38; color:#9aa3b2; }
+  .kv { margin:4px 0; }
+  .kv b { color:var(--acc); }
+  .caveat { color:#f4b860; } .caveat b { color:#f4b860; }
+  .en { display:none; color:var(--mut); font-size:14px; border-left:2px solid var(--line); padding-left:10px; margin-top:8px; }
+  body.show-en .en { display:block; }
+  a { color:var(--acc); text-decoration:none; }
+  .count { color:var(--mut); font-size:13px; margin:6px 0 14px; }
+</style>
+</head><body>
+<header>
+  <h1>📬 이번 주 신규 — 2026-06-29</h1>
+  <div class="meta">1편 · <a href="../">전체 아카이브</a> · <a href="./">주간 모음</a></div>
+</header>
+<main><div id="list"></div></main>
+<script>
+const DATA = [{"title": "Artificial Intelligence As A Research Tool In Entrepreneurial Finance: Implications For SME Financing And Sustainable Development In Asian Financial Ecosystems", "doi": "10.69980/1c00jw16", "authors": ["Rahul Patowary", "Sarmistha Chatterjee", "Farha Naaz", "Ruchita Nandi", "Aashtha Saikia", "Pinamoni Taye"], "year": 2026, "venue": "DOAJ (DOAJ: Directory of Open Access Journals)", "url": "https://doi.org/10.69980/1c00jw16", "abstract": "Artificial intelligence (AI) is dramatically changing financial research by changing the way knowledge is created, interpreted and utilized in decision-making situations. Drawing on a systematic qualitative synthesis of current academic literature, the research shows that artificial intelligence-based methodologies and specifically machine learning and deep learning methods consistently surpass traditional econometric methods in high-dimensional financial applications such as asset pricing, credit risk assessment, fraud detection and investment analytics. Beyond improvements in predictions, the use of AI transforms the epistemic foundations of the financial world in ways such as the ability to find complex nonlinear patterns or the incorporation of data-driven analytics at the level of institutional infrastructures. These advancements have important implications for entrepreneurial ecosystems, given the role that AI-based financial systems play in improving the credit assessment of SMEs, mitigating information asymmetries in the financial evaluation of start-ups, and improving fintech-enabled financial inclusion, particularly in fast digitalising Asian markets. AI-driven financial research will help in enhancing efficiency in allocating capital and underpinning sustainability-oriented investment practices to innovate-led growth and long-term economic resilience in emerging economies in Asia. Artificial intelligence is therefore a new research paradigm that shapes more inclusive, innovation-driven and sustainable financial systems.", "cited_by": 0, "concepts": ["Underpinning", "Finance", "Financial asset", "Investment (military)", "Asset (computer security)", "Asset management", "Sustainable development", "Business", "Economics", "Financial market", "Capital market", "Resilience (materials science)", "Financial engineering", "Financial services", "Financial risk", "Emerging markets", "Human capital", "Financial innovation", "Productivity", "Analytics", "Venture capital", "Capital (architecture)", "Artificial intelligence", "Financial instrument", "Psychological resilience", "Corporate governance", "Financial capital", "Information asymmetry", "Entrepreneurship", "Capital asset", "Big data", "Financial management", "Knowledge economy", "Asset allocation"], "relevance": 100, "reason": "키워드 4개 일치 (Venture Capital, Entrepreneurial Finance, Corporate Governance, Machine Learning)", "is_canon": false, "summary": {"summary": "Artificial intelligence (AI) is dramatically changing financial research by changing the way knowledge is created, interpreted and utilized in decision-making situations. Drawing on a systematic qualitative synthesis of current academic literature, the research shows that artificial intelligence-bas…", "key_result": "", "dependent_var": "기업가치", "independent_var": "성장, 머신러닝, 딥러닝", "method": "머신러닝", "caveats": "예측≠인과 주의"}}];
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function tierBadge(d){
+  if(d.tier==='F') return '<span class="badge canon">Foundational</span>';
+  if(d.tier) return `<span class="badge t${d.tier}">Tier ${d.tier}</span>`;
+  return '';
+}
+function cardHtml(d){
+  const su = d.summary||{};
+  const authors = (d.authors||[]).slice(0,4).join(', ') + ((d.authors||[]).length>4?' 외':'');
+  return `<div class="card">
+    <h2>${esc(d.title)} ${tierBadge(d)}<span class="badge">관련도 ${d.relevance||0}</span></h2>
+    <div class="row">${esc(d.venue||'NA')} (${d.year||'NA'}) · ${esc(authors)} · 인용 ${d.cited_by||0}${d.doi?` · <a href="${esc(d.url)}" target="_blank">DOI</a>`:''}</div>
+    ${su.summary?`<div class="kv">${esc(su.summary)}</div>`:''}
+    ${su.key_result?`<div class="kv"><b>핵심 결과</b> ${esc(su.key_result)}</div>`:''}
+    ${su.dependent_var?`<div class="kv"><b>종속변수</b> ${esc(su.dependent_var)}</div>`:''}
+    ${su.independent_var?`<div class="kv"><b>독립변수</b> ${esc(su.independent_var)}</div>`:''}
+    ${su.method?`<div class="kv"><b>방법</b> ${esc(su.method)}</div>`:''}
+    ${su.caveats?`<div class="kv caveat"><b>⚠️ 유의점</b> ${esc(su.caveats)}</div>`:''}
+    ${d.reason?`<div class="kv" style="color:var(--mut)"><b>선정 이유</b> ${esc(d.reason)}</div>`:''}
+    ${d.abstract?`<div class="en"><b>Abstract.</b> ${esc(d.abstract)}</div>`:''}
+  </div>`;
+}
+
+DATA.sort((a,b)=>(b.relevance||0)-(a.relevance||0));
+document.getElementById('list').innerHTML=DATA.map(cardHtml).join('')||'<p style="color:var(--mut)">이번 주 신규 논문이 없습니다.</p>';
+</script>
+</body></html>
