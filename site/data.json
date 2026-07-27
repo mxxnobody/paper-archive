@@ -8870,6 +8870,56 @@
     "tier": 3
   },
   {
+    "title": "Temporal fit in entrepreneurial finance: a perspective on institutional timing in a resource-constrained environment",
+    "doi": "10.1108/ijebr-03-2026-0311",
+    "authors": [
+      "Nathanael Ojöng",
+      "Amon Simba"
+    ],
+    "year": 2026,
+    "venue": "International Journal of Entrepreneurial Behaviour & Research",
+    "url": "https://doi.org/10.1108/ijebr-03-2026-0311",
+    "abstract": "Purpose This exploratory study utilizes the concept of temporal fit to theorize the synchronization between the financial schedules of microloan institutions and the activity cycles of micro-entrepreneurs within resource-constrained environments. Specifically, it develops theoretical insights into how timing structures influence venture outcomes by elaborating on the ways delayed disbursements reshape entrepreneurial activities once funding is finally secured. Design/methodology/approach The primary data for this study were collected through in-depth interviews with 51 Cameroonian micro-entrepreneurs. Following data transcription, supplementary interviews were conducted to address any information gaps. NVivo was utilized to organize the transcribed data thematically, and the Gioia methodology was adopted to enhance rigor in the data analysis process. Findings The findings illustrate how institutional delays create temporal disjunctures, necessitating adaptive timing efforts and leading to temporal depletion, collectively compromising profitability, repayment capacity and venture continuity. Originality/value This study contributes to the entrepreneurship theory by identifying how entrepreneurial finance involves not only resource availability but also temporal synchronisation, particularly within the resource-constrained environments of the developing world. By recognizing this temporal fit, the study redefines resource mobilization as a coordination challenge rather than merely a distributional one.",
+    "cited_by": 0,
+    "concepts": [
+      "Perspective (graphical)",
+      "Synchronization (alternating current)",
+      "Resource (disambiguation)",
+      "Entrepreneurship",
+      "Business",
+      "Resource mobilization",
+      "Exploratory research",
+      "Knowledge management",
+      "Resource-based view",
+      "Dynamics (music)",
+      "Economics",
+      "Marketing",
+      "Qualitative property",
+      "Venture capital",
+      "Key (lock)",
+      "Public relations",
+      "Qualitative research",
+      "Institutional theory",
+      "Entrepreneurial finance",
+      "Finance",
+      "Sociology",
+      "Time perspective"
+    ],
+    "relevance": 88,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Purpose This exploratory study utilizes the concept of temporal fit to theorize the synchronization between the financial schedules of microloan institutions and the activity cycles of micro-entrepreneurs within resource-constrained environments. Specifically, it develops theoretical insights into h…",
+      "key_result": "",
+      "dependent_var": "",
+      "independent_var": "",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.1108/ijebr-03-2026-0311",
+    "tier": 3
+  },
+  {
     "title": "Venture Capital Netzwerke in Europe -",
     "doi": null,
     "authors": [
