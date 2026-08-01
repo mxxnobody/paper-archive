@@ -8920,6 +8920,55 @@
     "tier": 3
   },
   {
+    "title": "Public data openness and venture capital investments",
+    "doi": "10.1080/00036846.2026.2709068",
+    "authors": [
+      "Yixuan Sun"
+    ],
+    "year": 2026,
+    "venue": "Applied Economics",
+    "url": "https://doi.org/10.1080/00036846.2026.2709068",
+    "abstract": "This study investigates the impact of public data openness (PD) on venture capital investments. Our research design provides new evidence on how public data, as digital public goods, can serve as a policy instrument in public governance to promote venture capital investments by boosting regional trust and improving the business credit environment, both theoretically and empirically. We use data from 291 prefecture-level cities from 2009 to 2021 to examine the adoption of online public data platforms by local public sectors in China’s pilot cities. Using staggered Difference-in-Differences (DID) analyses, we find that public data platforms significantly increase the number of city-level venture capital investments. Our findings are also robust to a series of tests and checks for endogeneity, including dynamic DID, synthetic DID, matching, poisson pseudo-maximum-likelihood estimation, alternative measures of VC, exclusion of other policies’ impacts, Bacon-Decomposition and Callaway and Sant’Anna estimator, and machine learning techniques. In additional analysis, we also verify that public data openness helps mitigate regional investment imbalances in venture capital. Our empirical findings indicate that public sectors should promote the openness of public data resources to generate greater positive externalities in regional development.",
+    "cited_by": 0,
+    "concepts": [
+      "Openness to experience",
+      "Venture capital",
+      "Economics",
+      "Public capital",
+      "Initial public offering",
+      "Business",
+      "Corporate governance",
+      "Social venture capital",
+      "Panel data",
+      "Externality",
+      "Finance",
+      "Investment (military)",
+      "Public good",
+      "Public sector",
+      "Public investment",
+      "Public policy",
+      "Alternative investment",
+      "Private investment in public equity",
+      "Transparency (behavior)",
+      "Capital (architecture)",
+      "Empirical evidence",
+      "Public economics"
+    ],
+    "relevance": 88,
+    "reason": "키워드 3개 일치 (Venture Capital, Corporate Governance, Machine Learning)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Using staggered Difference-in-Differences (DID) analyses, we find that public data platforms significantly increase the number of city-level venture capital investments.",
+      "key_result": "Using staggered Difference-in-Differences (DID) analyses, we find that public data platforms significantly increase the number of city-level venture capital investments.",
+      "dependent_var": "",
+      "independent_var": "기업지배구조, 머신러닝",
+      "method": "이중차분(DiD), 머신러닝, 매칭",
+      "caveats": "DiD: 평행추세 가정 검토, 예측≠인과 주의"
+    },
+    "_key": "doi:10.1080/00036846.2026.2709068",
+    "tier": 3
+  },
+  {
     "title": "Venture Capital Netzwerke in Europe -",
     "doi": null,
     "authors": [
