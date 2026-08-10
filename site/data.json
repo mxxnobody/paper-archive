@@ -6355,6 +6355,100 @@
     "tier": 3
   },
   {
+    "title": "Financial Market Support for Green and Digital Energy Startups: The Role of Venture Capital Expenditures",
+    "doi": "10.61093/fmir.10(2).1-21.2026",
+    "authors": [
+      "Svitlana Bilan",
+      "Dmytro Halynskyi"
+    ],
+    "year": 2026,
+    "venue": "Financial Markets Institutions and Risks",
+    "url": "https://doi.org/10.61093/fmir.10(2).1-21.2026",
+    "abstract": "The accelerating interaction among financial markets, venture capital ecosystems, sustainable finance, and energy transition investment has heightened the strategic importance of green and digital energy startups as drivers of financial innovation, low-carbon technological transformation, and long-term economic competitiveness in European economies. Previous studies within the fields of financial markets, investment management, and entrepreneurial finance provide limited evidence on how venture capital expenditures simultaneously affect both the creation and financing of green and digital energy startups over different temporal horizons, while insufficiently accounting for stage-specific effects, innovation ecosystems, and the role of financial-market support in sustainable investment processes. This study aims to assess how venture capital expenditures influence the creation and financing of green and digital energy startups in European and neighboring economies, with particular attention to delayed effects, funding-stage differences, and national innovation conditions. The empirical analysis uses a balanced panel of 37 countries for 2018–2023 and applies Poisson pseudo-maximum likelihood (PPML) models with country- and year-fixed effects for startup counts, two-way fixed-effects models with Driscoll–Kraay standard errors for funding outcomes, and two-part robustness models for later-stage funding. The contemporaneous PPML results show positive but statistically insignificant effects: a 10-point increase in venture capital expenditures is associated with a 1.09% increase in expected green energy startups and a 0.62% increase in expected digital energy startups. The one-year lagged model shows a significant effect only for green energy startups, where the expected number increases by 1.64%. In comparison, the effect for digital energy startups is 0.75% and insignificant. The strongest evidence appears in the two-year lagged models, where venture capital expenditures are associated with a 2.35% increase in expected green energy startups and a 3.89% increase in expected digital energy startups. Funding models reveal no significant immediate or one-year effects. At the same time, two-part robustness results show that two-year lagged venture capital expenditures increase the odds of later-stage green funding by 77.6% and the amount of such funding by 23.8%. These findings contribute to the literature on financial markets, sustainable finance, entrepreneurial investment, and innovation financing, while also providing practical implications for investment management, venture capital policy, and the development of long-term financial support mechanisms for green and digital energy entrepreneurship in European economies.",
+    "cited_by": 1,
+    "concepts": [
+      "Venture capital",
+      "Investment (military)",
+      "Panel data",
+      "Economics",
+      "Finance",
+      "Business",
+      "Social venture capital",
+      "Robustness (evolution)",
+      "Energy (signal processing)",
+      "Capital (architecture)",
+      "Financial market",
+      "Monetary economics",
+      "Financial capital",
+      "Capital market",
+      "Sustainable development",
+      "Empirical evidence",
+      "Capital expenditure",
+      "Industrial organization",
+      "Renewable energy",
+      "Economic capital",
+      "Financial innovation"
+    ],
+    "relevance": 89,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance) · 인용 1",
+    "is_canon": false,
+    "summary": {
+      "summary": "The contemporaneous PPML results show positive but statistically insignificant effects: a 10-point increase in venture capital expenditures is associated with a 1.09% increase in expected green energy startups and a 0.62% increase in expected digital energy startups.",
+      "key_result": "The contemporaneous PPML results show positive but statistically insignificant effects: a 10-point increase in venture capital expenditures is associated with a 1.09% increase in expected green energy startups and a 0.62% increase in expected digital energy startups.",
+      "dependent_var": "",
+      "independent_var": "",
+      "method": "패널분석",
+      "caveats": ""
+    },
+    "_key": "doi:10.61093/fmir.10(2).1-21.2026",
+    "tier": 3
+  },
+  {
+    "title": "Redefining the role of investors in South Korea’s startup ecosystem: A network analysis and explainable AI approach",
+    "doi": "10.1080/00472778.2025.2601681",
+    "authors": [
+      "Hojune Cha",
+      "Yeokyung Hwang",
+      "Junseok Hwang",
+      "Junmin Lee"
+    ],
+    "year": 2026,
+    "venue": "Journal of Small Business Management",
+    "url": "https://doi.org/10.1080/00472778.2025.2601681",
+    "abstract": "Startups are vital drivers of innovation and economic growth, particularly in post–catch-up economies such as South Korea. This study investigates how heterogeneous investor types engage with startups through differentiated behaviors and network positions. Using the Innoforest database containing data on 338 investors and 3,570 startups, we construct an investor–startup network and apply a model-driven explainable AI-based machine learning approach to classify investor types based on capital, investment activity, and network centrality metrics. The analysis reveals which features most strongly influence investor classification and how these correspond to strategic roles such as early-stage brokerage, hub coordination, and commercialization. The results show that accelerators, venture capital firms, and financial institutions occupy distinct structural positions and engage startups at different stages with varying objectives. This study advances understanding of investor heterogeneity by linking structural positioning to behavioral roles and by illustrating how institutional logics in post–catch-up contexts shape investment engagement within startup ecosystems.",
+    "cited_by": 1,
+    "concepts": [
+      "Business",
+      "Network analysis",
+      "Marketing",
+      "Knowledge management",
+      "Social network analysis",
+      "Industrial organization",
+      "Public relations",
+      "Computer science",
+      "Process management",
+      "Intelligence analysis",
+      "Economics",
+      "Actuarial science",
+      "Market analysis",
+      "Finance",
+      "Risk analysis (engineering)"
+    ],
+    "relevance": 89,
+    "reason": "키워드 3개 일치 (Venture Capital, Machine Learning, South Korea) · 인용 1",
+    "is_canon": false,
+    "summary": {
+      "summary": "The results show that accelerators, venture capital firms, and financial institutions occupy distinct structural positions and engage startups at different stages with varying objectives.",
+      "key_result": "The results show that accelerators, venture capital firms, and financial institutions occupy distinct structural positions and engage startups at different stages with varying objectives.",
+      "dependent_var": "",
+      "independent_var": "성장, 머신러닝",
+      "method": "머신러닝",
+      "caveats": "예측≠인과 주의"
+    },
+    "_key": "doi:10.1080/00472778.2025.2601681",
+    "tier": 3
+  },
+  {
     "title": "On the asymmetric effects of stock market valuation and macroeconomic environment on venture capital and private equity",
     "doi": "10.1108/emjb-05-2024-0124",
     "authors": [
@@ -9473,6 +9567,51 @@
       "caveats": ""
     },
     "_key": "doi:10.5465/amproc.2025.10096symposium",
+    "tier": 3
+  },
+  {
+    "title": "Public Venture Capital Governance and Grant Timing in Startup Growth : Evidence from Finland’s Layered Innovation System",
+    "doi": null,
+    "authors": [
+      "Joonatan Haataja"
+    ],
+    "year": 2025,
+    "venue": "Osuva (University of Vaasa)",
+    "url": "https://openalex.org/W7198825454",
+    "abstract": "Public funding has been object for various topics throughout the field of research in finance. However, the governance of public venture capital, the timing of public grants, and the interac- tion of these instruments relative to startup performance remains mostly uncharted in litera- ture. Utilising an extensive panel dataset combining firm-level financials, Business Finland grant records, and VC investment data from the Finnish Venture Capital Association, the study exam- ines three distinct hypotheses on how the governance structure of public VC and the sequencing of public grants relative to VC investments jointly contribute to firm growth in sales and employ- ment. Methodology is built on fixed-effects regression models to to estimate within-firm effects, complemented by robustness checks for grant timing, sectoral heterogeneity, and grant inten- sity. The findings provide nuanced results, as the governance factor alone, direct or indirect public VC investment, is surprisingly not associated with firm growth. However, timing of public grants matters, as grants awarded after a VC investment are associated with greater firm growth com- pared to grants received before VC funding. Furthermore, the interaction analysis connecting VC governance and grant timing suggests that the growth effect of post-VC grants is pronounced for firms supported by indirect public VC, highlighting the value of layered and well-coordinated innovation policy. The results contribute to the highly relevant conversation of public intervention and mecha- nisms in creating layered innovation ecosystems where the expertise of private VC companies is leveraged and public tools are implemented strategically through coordination, not in isolation. The results emphasize that maximizing the impact of public funding requires not only addressing market failures but carefully aligning the type and timing of public intervention to reinforce pri- vate sector incentives and capabilities.",
+    "cited_by": 0,
+    "concepts": [
+      "Corporate governance",
+      "Venture capital",
+      "Initial public offering",
+      "Business",
+      "Robustness (evolution)",
+      "Public capital",
+      "Panel data",
+      "Economics",
+      "Investment (military)",
+      "Finance",
+      "Public funding",
+      "Public sector",
+      "Industrial organization",
+      "Public policy",
+      "Accounting",
+      "Public investment",
+      "Field (mathematics)",
+      "Human capital"
+    ],
+    "relevance": 88,
+    "reason": "키워드 3개 일치 (Venture Capital, Corporate Governance, Startup Growth)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Public funding has been object for various topics throughout the field of research in finance. However, the governance of public venture capital, the timing of public grants, and the interac- tion of these instruments relative to startup performance remains mostly uncharted in litera- ture.…",
+      "key_result": "",
+      "dependent_var": "",
+      "independent_var": "스타트업 성장, 성장, 기업지배구조",
+      "method": "패널분석, 회귀분석",
+      "caveats": ""
+    },
+    "_key": "title:publicventurecapitalgovernanceandgranttiminginstartupgrowthevidencefromfinlandslayeredinnovationsystem",
     "tier": 3
   },
   {
