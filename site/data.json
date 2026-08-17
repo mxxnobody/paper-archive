@@ -5253,6 +5253,43 @@
     "tier": 3
   },
   {
+    "title": "Priors, Experiments, Learning, and Persuasion in (Bayesian) Entrepreneurial Finance",
+    "doi": "10.7551/mitpress/15918.003.0013",
+    "authors": [
+      "Ramana Nanda"
+    ],
+    "year": 2026,
+    "venue": "The MIT Press eBooks",
+    "url": "https://doi.org/10.7551/mitpress/15918.003.0013",
+    "abstract": "&lt;div&gt; At the heart of entrepreneurial finance lies a persuasion challenge: regardless of&amp;nbsp;&lt;span&gt;the strength of an entrepreneur’s belief in the potential of their idea, they typically&amp;nbsp;&lt;/span&gt;&lt;span&gt;need to convince investors to provide the financial capital required for its commercialization.&amp;nbsp;&lt;/span&gt;&lt;span&gt;How should entrepreneurs approach this challenge in order to maximize&amp;nbsp;&lt;/span&gt;&lt;span&gt;the chance of raising the required external finance? Why does it appear harder&amp;nbsp;&lt;/span&gt;&lt;span&gt;to persuade venture capital investors to finance startups in certain industries and&amp;nbsp;&lt;/span&gt;&lt;span&gt;regions and in certain periods of time? Are there systematic frictions preventing entrepreneurs&amp;nbsp;&lt;/span&gt;&lt;span&gt;from effectively persuading investors in certain settings and if so, what&amp;nbsp;&lt;/span&gt;&lt;span&gt;can be done to reduce them? In this chapter, I discuss answers to these and other&amp;nbsp;&lt;/span&gt;&lt;span&gt;questions through a conceptual framework in which investors update their beliefs&amp;nbsp;&lt;/span&gt;&lt;span&gt;about a startup’s prospects through a sequence of investments over time.&lt;/span&gt; &lt;/div&gt;",
+    "cited_by": 5,
+    "concepts": [
+      "Prior probability",
+      "Persuasion",
+      "Bayesian probability",
+      "Bayesian inference",
+      "Econometrics",
+      "Economics",
+      "Psychology",
+      "Computer science",
+      "Artificial intelligence",
+      "Social psychology"
+    ],
+    "relevance": 91,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance) · 인용 5",
+    "is_canon": false,
+    "summary": {
+      "summary": "&lt;div&gt; At the heart of entrepreneurial finance lies a persuasion challenge: regardless of&amp;nbsp;&lt;span&gt;the strength of an entrepreneur’s belief in the potential of their idea, they typically&amp;nbsp;&lt;/span&gt;&lt;span&gt;need to convince investors to provide the financial capital re…",
+      "key_result": "",
+      "dependent_var": "",
+      "independent_var": "",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.7551/mitpress/15918.003.0013",
+    "tier": 3
+  },
+  {
     "title": "Family firms in entrepreneurial finance: The case of corporate venture capital",
     "doi": "10.1016/j.jbankfin.2025.107391",
     "authors": [
