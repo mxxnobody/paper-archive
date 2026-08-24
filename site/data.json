@@ -7049,6 +7049,38 @@
     "tier": 3
   },
   {
+    "title": "Entrepreneurial Experimentation Design for Venture Finance",
+    "doi": "10.3386/w34085",
+    "authors": [
+      "Joshua S. Gans"
+    ],
+    "year": 2025,
+    "venue": "National Bureau of Economic Research",
+    "url": "https://doi.org/10.3386/w34085",
+    "abstract": "This paper examines how entrepreneurs strategically design experiments to convince venture capitalists (VCs) to fund their projects when investors interpret data through heterogeneous statistical frameworks.Drawing on Liang (2021)'s model of games with incomplete information played by statistical learners, we translate her abstract theoretical framework into a practical venture capital setting.We characterise how entrepreneurs balance funding plausibility against equity dilution by strategically choosing experiments along two critical dimensions: sample size (precision) and dimensionality (breadth of metrics).Our analysis reveals that for genuinely highquality projects, increased precision helps by forcing VC beliefs to converge toward true quality.For low-quality projects, funding depends on preserving disagreement through sparse, highdimensional experiments.The entrepreneur's optimal design depends critically on their prior beliefs: confident entrepreneurs choose high-precision, low-dimensional experiments that minimise equity dilution, while uncertain entrepreneurs opt for sparse, high-dimensional experiments that maximise the probability some VC will hold sufficiently optimistic beliefs.The framework provides a rigorous foundation for understanding how entrepreneurs and investors can rationally disagree when observing identical evidence, with significant implications for strategic information design in entrepreneurial settings.",
+    "cited_by": 1,
+    "concepts": [
+      "Venture capital",
+      "Business",
+      "Social venture capital",
+      "Entrepreneurial finance",
+      "Finance"
+    ],
+    "relevance": 89,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance) · 인용 1",
+    "is_canon": false,
+    "summary": {
+      "summary": "This paper examines how entrepreneurs strategically design experiments to convince venture capitalists (VCs) to fund their projects when investors interpret data through heterogeneous statistical frameworks.Drawing on Liang (2021)'s model of games with incomplete information played by statistical le…",
+      "key_result": "",
+      "dependent_var": "",
+      "independent_var": "",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.3386/w34085",
+    "tier": 3
+  },
+  {
     "title": "Common Venture Capital Investors and Startup Growth",
     "doi": "10.1093/rfs/hhad071",
     "authors": [
@@ -9244,6 +9276,110 @@
       "caveats": ""
     },
     "_key": "title:signalingtheoryinventurecapitalstagefinancingresearchareviewandresearchagenda",
+    "tier": 3
+  },
+  {
+    "title": "\"BLOCKCHAIN ENTREPRENEURIAL FINANCE: INVESTOR BEHAVIOR AND CONTRIBUTIONS TO STARTUP SUCCESS\"",
+    "doi": null,
+    "authors": [
+      "Huy Hoang Le"
+    ],
+    "year": 2026,
+    "venue": "Unicam Scientific Publications (University of Camerino)",
+    "url": "https://openalex.org/W7165824740",
+    "abstract": "This thesis examines different types of investors across the evolution of entrepreneurial finance in the blockchain sector, focusing on investors’ behaviors and their contributions to the success of blockchain startups. The structure of capital inflows into blockchain ventures has undergone significant changes over time. While early blockchain financing resembled a decentralized form of crowdfunding, dominated by retail participation, more recent funding has increasingly been provided by institutional investors. Retail and institutional investors exhibit different motives, are attracted by different factors, and bring different values to new venture firms. This study systematically unpacks these dimensions to provide a comprehensive understanding of blockchain investors. Firstly, the results indicate that retail unsophisticated investors are strongly influenced by costless signals conveyed through the linguistic characteristics of new ventures’ disclosures; however, this effect does not necessarily extend to professional investors. Language that promotes radical innovation successfully arouses the novelty advocacy among retail investors, thereby generating greater attention to initial coin offering (ICO) campaigns that employ such a linguistic style. In contrast, although most ICOs are conducted at the early stage of business development, an excessive focus on future orientation is counterproductive, reducing project attractiveness during the crowdsale and being associated with higher token volatility in the first month after listing. Secondly, this study highlights the important role of professional investors. Their presence signals a project’s quality to the public. Moreover, owing to their superior screening capabilities and post-investment monitoring and coaching, blockchain projects backed by institutional investors demonstrate stronger financial and operating performance. Conditional on institutional participation, projects supported by more experienced and network-central investors achieve even greater outperformance. Finally, by delving into partner selection within funding rounds, this thesis shows that professional investors financing blockchain startups and those in traditional entrepreneurial finance follow the same underlying mechanisms when choosing partners, considering factors such as prior co- investments, as well as, geographical, industrial, and investment-style proximity.",
+    "cited_by": 0,
+    "concepts": [
+      "Entrepreneurial finance",
+      "Attractiveness",
+      "Volatility (finance)",
+      "Business",
+      "Novelty",
+      "Quality (philosophy)",
+      "Blockchain",
+      "Venture capital",
+      "Institutional investor",
+      "Finance",
+      "Entrepreneurship",
+      "Marketing",
+      "Financial market",
+      "Security token",
+      "Capital market",
+      "Intermediary",
+      "Economics",
+      "Financial instrument",
+      "Industrial organization",
+      "Financial services",
+      "Behavioral economics",
+      "Transparency (behavior)",
+      "Government (linguistics)"
+    ],
+    "relevance": 88,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Firstly, the results indicate that retail unsophisticated investors are strongly influenced by costless signals conveyed through the linguistic characteristics of new ventures’ disclosures; however, this effect does not necessarily extend to professional investors.",
+      "key_result": "Firstly, the results indicate that retail unsophisticated investors are strongly influenced by costless signals conveyed through the linguistic characteristics of new ventures’ disclosures; however, this effect does not necessarily extend to professional investors.",
+      "dependent_var": "",
+      "independent_var": "신호",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "title:blockchainentrepreneurialfinanceinvestorbehaviorandcontributionstostartupsuccess",
+    "tier": 3
+  },
+  {
+    "title": "Entrepreneurial finance reconsidered: a systematic review and future research agenda",
+    "doi": "10.1108/cafr-04-2026-0056",
+    "authors": [
+      "Anupama Shrestha Panta",
+      "Sabin Bikram Panta",
+      "Pradeep Kumar Gupta"
+    ],
+    "year": 2026,
+    "venue": "China Accounting and Finance Review",
+    "url": "https://doi.org/10.1108/cafr-04-2026-0056",
+    "abstract": "Purpose This study synthesizes contemporary academic research on entrepreneurial finance, which is fragmented across funding types, theoretical silos, and methodological orthodoxies. Furthermore, this study evaluates its limitations and advances a programmatic research agenda. Design/methodology/approach A systematic literature review of 53 studies published in A/A*-rated journals listed in the Australian Business Deans Council Journal Quality List (2022) between 2012 and 2024, following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses 2020 guidelines, has been conducted. Searches were conducted in Web of Science, Scopus, SAGE, ProQuest, EBSCOhost and Wiley Online Library. Quality was assessed using the Mixed Methods Appraisal Tool (MMAT v2018). Synthesis was conducted using thematic analysis supported by NVivo 12. Findings The findings show that the field is characterized by empirical expansion but is conceptually fragmented. Quantitative methods dominate (79.2%), with venture capital, crowdfunding and angel investing as primary foci. Furthermore, North American and European contexts account for 73.6% of studies. Foundational theories (agency, signaling and the resource-based view) remain influential but are applied in isolation rather than in integration. Critically, entrepreneurs' lived experiences are almost absent from the literature (only 5.7% of studies include interviews with entrepreneurs). Originality/value This review provides the first systematic critique of the absence of the entrepreneurial voice as a structural problem in knowledge production, not merely a research gap, with a formal definition and explicit scope. Furthermore, it proposes a multilevel, process-oriented framework with five testable propositions derived directly from thematic synthesis patterns, with explicit tracing of the conceptual leap from findings to propositions. Finally, this study offers a prioritized research agenda that distinguishes diagnostic, urgent and high-risk questions with explicit methodological recommendations and connections to real-world developments.",
+    "cited_by": 0,
+    "concepts": [
+      "Systematic review",
+      "Thematic analysis",
+      "Quality (philosophy)",
+      "Empirical research",
+      "Sociology",
+      "Field (mathematics)",
+      "Public relations",
+      "Conceptual framework",
+      "Entrepreneurship",
+      "Accounting",
+      "Qualitative research",
+      "Engineering ethics",
+      "Political science",
+      "Knowledge management",
+      "Isolation (microbiology)",
+      "Qualitative analysis",
+      "Management",
+      "Empirical evidence",
+      "Conceptual model",
+      "The Conceptual Framework",
+      "Doctoral dissertation",
+      "Management science",
+      "Thematic structure",
+      "Venture capital",
+      "Business studies"
+    ],
+    "relevance": 88,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Findings The findings show that the field is characterized by empirical expansion but is conceptually fragmented.",
+      "key_result": "Findings The findings show that the field is characterized by empirical expansion but is conceptually fragmented.",
+      "dependent_var": "",
+      "independent_var": "신호",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.1108/cafr-04-2026-0056",
     "tier": 3
   },
   {
