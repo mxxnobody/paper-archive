@@ -536,6 +536,55 @@
     "tier": 2
   },
   {
+    "title": "Impact of Venture Capital on Technology Startups in Nigeria",
+    "doi": "10.56201/ijbfr.vol.11.no3.2025.pg129.154",
+    "authors": [
+      "Solomon O IGHOMUAYE"
+    ],
+    "year": 2026,
+    "venue": "IIARD INTERNATIONAL JOURNAL OF BANKING AND FINANCE RESEARCH",
+    "url": "https://doi.org/10.56201/ijbfr.vol.11.no3.2025.pg129.154",
+    "abstract": "This study investigates the impact of venture capital on the development and proliferation of technology startups in Nigeria over a 24-year period, spanning from 2000 to 2024. Venture capital was operationalized through four key indicators: Venture Capital Investment Amount (VCIA), Number of Venture Capital Backed Startups (NVCBS), Venture Capital Startup Revenue Growth Rate (VCSRGR), and Venture Capital Startup Survival Rate (VCSSR). The Total Number of New Technology Startups (TNNTS) served as the proxy for the performance of the Nigerian tech startup ecosystem. Utilizing a quantitative, ex post facto research design, secondary data were collected from reputable sources including SMEDAN, the Nigerian Investment Promotion Commission (NIPC), Corporate Affairs Commission (CAC), World Bank Enterprise Surveys, Partech Africa, Statista, and Disrupt Africa. Diagnostic tests, including the Breusch-Godfrey Serial Correlation LM test, the Breusch-Pagan-Godfrey heteroskedasticity test, the Ramsey RESET test, and the Jarque-Bera normality test, confirmed the reliability and validity of the model. Additionally, the Johansen cointegration test established a stable long-run equilibrium relationship among the variables. Utilizing a quantitative, the study employed the Ordinary Least Squares (OLS) multiple regression technique alongside robust econometric diagnostics to evaluate the relationship between venture capital and startup growth. The analysis revealed that VCIA, NVCBS, and VCSRGR had statistically significant and positive effects on TNNTS. These results indicate that increased venture capital inflows, a higher number of VC-supported startups, and strong revenue performance significantly enhance the rate at which new technology startups are formed. Conversely, VCSSR was found to have no significant effect on TNNTS, suggesting that the survival of existing startups does not necessarily lead to the formation of new ones. The study concluded that venture capital plays a transformative role in scaling technology entrepreneurship in Nigeria when directed towards value-creating dimensions such as funding volume, startup proliferation, and revenue enhancement. However, survival without performance does not appear to stimulate new entrepreneurial activity. Based on these findings, the study recommends that policymakers and investors prioritize performance-linked capital deployment and create an enabling regulatory and funding environment that emphasizes innovation, financial growth, and visibility. This research makes a significant contribution to the body of knowledge on entrepreneurial finance in emerging markets by offering a data-driven basis for shaping future investment strategies, policy decisions, and academic discourse on venture capital and technology startup ecosystems.",
+    "cited_by": 0,
+    "concepts": [
+      "Venture capital",
+      "Social venture capital",
+      "Business",
+      "Finance",
+      "Economics",
+      "Investment (military)",
+      "Revenue",
+      "Commission",
+      "Human capital",
+      "Promotion (chess)",
+      "Operationalization",
+      "New Ventures",
+      "Monetary economics",
+      "Capital (architecture)",
+      "Entrepreneurship",
+      "Rate of return",
+      "Ordinary least squares",
+      "Financial system",
+      "Economic capital",
+      "Cointegration",
+      "Proxy (statistics)",
+      "Industrial organization"
+    ],
+    "relevance": 100,
+    "reason": "키워드 3개 일치 (Venture Capital, Entrepreneurial Finance, Startup Growth)",
+    "is_canon": false,
+    "summary": {
+      "summary": "These results indicate that increased venture capital inflows, a higher number of VC-supported startups, and strong revenue performance significantly enhance the rate at which new technology startups are formed.",
+      "key_result": "These results indicate that increased venture capital inflows, a higher number of VC-supported startups, and strong revenue performance significantly enhance the rate at which new technology startups are formed.",
+      "dependent_var": "투자규모, 생존",
+      "independent_var": "스타트업 성장, 성장",
+      "method": "회귀분석",
+      "caveats": "자기응답·표본 편의 가능, 상관≠인과 주의"
+    },
+    "_key": "doi:10.56201/ijbfr.vol.11.no3.2025.pg129.154",
+    "tier": 2
+  },
+  {
     "title": "Gender differences in entrepreneurial equity financing—a systematic literature review",
     "doi": "10.1007/s11187-024-00989-x",
     "authors": [
@@ -945,7 +994,7 @@
       "caveats": ""
     },
     "_key": "doi:10.5287/ora-noxgrz6r5",
-    "tier": 2
+    "tier": 3
   },
   {
     "title": "Innovative Startup Financing Models: Venture Capital and Crowdfunding",
@@ -7081,6 +7130,51 @@
     "tier": 3
   },
   {
+    "title": "Youth entrepreneurship and credit access in sub-Saharan Africa: evidence from Uganda’s youth venture capital fund",
+    "doi": "10.1080/13504851.2025.2560109",
+    "authors": [
+      "Giacomo Pallante"
+    ],
+    "year": 2025,
+    "venue": "Applied Economics Letters",
+    "url": "https://doi.org/10.1080/13504851.2025.2560109",
+    "abstract": "Among the barriers hindering African development, improving access to credit for businesses remains a significant challenge, particularly for young borrowers seeking favourable loan conditions. This paper analyzes the impact of the Youth Venture Capital Fund (YVCF) program, expanded in Uganda in 2013 to improve access to credit and foster youth entrepreneurship within the eligible cohort of individuals aged 18–35. The analysis uses data from LSMA-ISA surveys of the World Bank, a nationally representative dataset spanning eight waves from 2009 to 2016. Adopting a difference-in-differences approach, we estimate the intention-to-treat effect on the eligible population. Results show a significant increase in the likelihood of starting a new business, a modest rise in monthly per capita expenditure, and a positive effect on the survival rate of newly established enterprises. However, the benefits are not uniformly persistent: the effects on business creation and expenditure diminish within one to two years, whereas the survival rate of new enterprises remains positively impacted for at least four years from the policy introduction. Heterogeneous effects are observed, with female-headed enterprises experiencing the largest and most enduring benefits. Conversely, the youngest cohort in the targeted population does not significantly benefit from the program.",
+    "cited_by": 1,
+    "concepts": [
+      "Venture capital",
+      "Entrepreneurship",
+      "Business",
+      "Entrepreneurial finance",
+      "Social venture capital",
+      "Finance",
+      "Financial system",
+      "Capital (architecture)",
+      "Investment (military)",
+      "Bank credit",
+      "Economics",
+      "Credit history",
+      "Human capital",
+      "Microfinance",
+      "Government (linguistics)",
+      "Initial public offering",
+      "Panel data",
+      "Labour economics"
+    ],
+    "relevance": 89,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance) · 인용 1",
+    "is_canon": false,
+    "summary": {
+      "summary": "Adopting a difference-in-differences approach, we estimate the intention-to-treat effect on the eligible population.",
+      "key_result": "Adopting a difference-in-differences approach, we estimate the intention-to-treat effect on the eligible population.",
+      "dependent_var": "생존",
+      "independent_var": "",
+      "method": "이중차분(DiD)",
+      "caveats": "DiD: 평행추세 가정 검토, 자기응답·표본 편의 가능"
+    },
+    "_key": "doi:10.1080/13504851.2025.2560109",
+    "tier": 3
+  },
+  {
     "title": "Common Venture Capital Investors and Startup Growth",
     "doi": "10.1093/rfs/hhad071",
     "authors": [
@@ -9380,6 +9474,54 @@
       "caveats": ""
     },
     "_key": "doi:10.1108/cafr-04-2026-0056",
+    "tier": 3
+  },
+  {
+    "title": "Early-stage financing under urgency: business angels versus venture capital",
+    "doi": "10.2139/ssrn.7358535",
+    "authors": [
+      "Andrea Odille Bosio",
+      "Samuele Guido Sozzani"
+    ],
+    "year": 2026,
+    "venue": "SSRN Electronic Journal",
+    "url": "https://doi.org/10.2139/ssrn.7358535",
+    "abstract": null,
+    "cited_by": 0,
+    "concepts": [
+      "Venture capital",
+      "Finance",
+      "Business",
+      "Insolvency",
+      "Equity (law)",
+      "Entrepreneurial finance",
+      "Social venture capital",
+      "Economics",
+      "Market liquidity",
+      "Entrepreneurship",
+      "Capital (architecture)",
+      "Statutory law",
+      "Private equity",
+      "Value (mathematics)",
+      "Control (management)",
+      "Exit strategy",
+      "Test (biology)",
+      "Funding liquidity",
+      "Capital structure",
+      "Selection (genetic algorithm)"
+    ],
+    "relevance": 88,
+    "reason": "키워드 2개 일치 (Venture Capital, Entrepreneurial Finance)",
+    "is_canon": false,
+    "summary": {
+      "summary": "(초록 없음 — DOI 링크에서 확인)",
+      "key_result": "",
+      "dependent_var": "",
+      "independent_var": "",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.2139/ssrn.7358535",
     "tier": 3
   },
   {
