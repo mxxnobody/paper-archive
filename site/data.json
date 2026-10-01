@@ -10503,6 +10503,60 @@
     "tier": 3
   },
   {
+    "title": "Syndication with government and follow-on investment decision of private venture capital",
+    "doi": "10.1080/13504851.2026.2741409",
+    "authors": [
+      "Shuyu Shen",
+      "Chen Yan",
+      "Yilei Qian"
+    ],
+    "year": 2026,
+    "venue": "Applied Economics Letters",
+    "url": "https://doi.org/10.1080/13504851.2026.2741409",
+    "abstract": "Using a round-by-round dataset of China’s venture capital market between 2006 and 2024, we find that syndicating with Government Venture Capital (GVC) is significantly associated with a reduced probability of follow-on investment by incumbent Private Venture Capital (PVC). This negative association is inconsistent with generalized crowding-out by competition for high-quality assets, but rather correlates with concerns about risk and hold-up costs. This study advances understanding of GVC beyond the initial formation of syndicates to the continuity of private capital investment, while leaving scope for further improvements in causal identification and data coverage.",
+    "cited_by": 0,
+    "concepts": [
+      "Venture capital",
+      "Web syndication",
+      "Business",
+      "Investment (military)",
+      "Social venture capital",
+      "Government (linguistics)",
+      "Finance",
+      "Scope (computer science)",
+      "Private equity",
+      "Capital (architecture)",
+      "Competition (biology)",
+      "Identification (biology)",
+      "Economic capital",
+      "Private equity firm",
+      "Investment decisions",
+      "Private sector",
+      "Capital market",
+      "Financial system",
+      "Economics",
+      "Financial capital",
+      "Private capital",
+      "Market economy",
+      "Industrial organization",
+      "Market competition",
+      "Cost of capital"
+    ],
+    "relevance": 88,
+    "reason": "키워드 2개 일치 (Venture Capital, Follow-on Investment)",
+    "is_canon": false,
+    "summary": {
+      "summary": "Using a round-by-round dataset of China’s venture capital market between 2006 and 2024, we find that syndicating with Government Venture Capital (GVC) is significantly associated with a reduced probability of follow-on investment by incumbent Private Venture Capital (PVC).",
+      "key_result": "Using a round-by-round dataset of China’s venture capital market between 2006 and 2024, we find that syndicating with Government Venture Capital (GVC) is significantly associated with a reduced probability of follow-on investment by incumbent Private Venture Capital (PVC).",
+      "dependent_var": "후속투자",
+      "independent_var": "",
+      "method": "",
+      "caveats": ""
+    },
+    "_key": "doi:10.1080/13504851.2026.2741409",
+    "tier": 3
+  },
+  {
     "title": "Venture Capital Netzwerke in Europe -",
     "doi": null,
     "authors": [
